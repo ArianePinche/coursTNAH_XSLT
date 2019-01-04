@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+
+<TEI 
+ xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Nom recueil</title>
+            <author>Paul Verlaine</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Encodage par moi-même</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>   
+         <div type="sonnet">
+            <!-- Un texte que l'on connait bien -->
+            <head>Nom poeme</head>
+            <lg type="quatrain" n="1">
+               <l>Je fais souvent ce rêve étrange et pénétrant</l>
+               <l>D'une femme inconnue, et que j'aime, et qui m'aime</l>
+               <l>Et qui n'est, chaque fois, ni tout à fait la même</l>
+               <l>Ni tout à fait une autre, et m'aime et me comprend.</l>
+            </lg>
+            <lg type="quatrain" n="2">
+               <l>Car elle me comprend, et mon coeur, transparent</l>
+               <l>Pour elle seule, hélas ! cesse d'être un problème</l>
+               <l>Pour elle seule, et les moiteurs de mon front blême,</l>
+               <l>Elle seule les sait rafraîchir, en pleurant.</l>
+            </lg>
+            <lg type="sizain">
+               <lg type="tercet" n="1">
+                  <l>Est-elle brune, blonde ou rousse ? - Je l'ignore.</l>
+                  <l>Son nom ? Je me souviens qu'il est doux et sonore</l>
+                  <l>Comme ceux des aimés que la Vie exila.</l>
+               </lg>
+               <lg type="tercet" n="2">
+                  <l>Son regard est pareil au regard des statues,</l>
+                  <l>Et, pour sa voix, lointaine, et calme, et grave, elle a</l>
+                  <l>L'inflexion des voix chères qui se sont tues.</l>
+               </lg>
+            </lg>
+         </div>
+      </body>
+   </text>
+</TEI>
