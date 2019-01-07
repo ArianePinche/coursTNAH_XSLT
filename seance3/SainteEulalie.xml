@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!DOCTYPE texte [
+<!ENTITY pbarre-pre "<choice><abbr>&#58981;</abbr><expan>pre</expan></choice>" >
+<!ENTITY obarre-om "<choice><abbr>õ</abbr><expan>om</expan></choice>">
+<!ENTITY xps-christus "<choice><abbr>x&#58981;s</abbr><expan>xr<ex>istu</ex>s</expan></choice>">
+<!ENTITY xpi-christi "<choice><abbr>x&#58981;i</abbr><expan>xr<ex>ist</ex>i</expan></choice>">
+<!ENTITY ntilde-non "<choice><abbr>&#241;</abbr><expan>n<ex>on</ex></expan></choice>">
+<!ENTITY pbarré-per "<choice><abbr>&#42833;</abbr><expan>p<ex>er</ex></expan></choice>" >
+]>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Séquence de sainte Eulalie</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Texte édité dans la cadre d'un exercice de XML-TEI à l'école nationale des
+               Chartes</p>
+         </publicationStmt>
+         <sourceDesc>
+
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Valencienne</settlement>
+                  <repository>Bibliothèque municipale</repository>
+                  <idno>150</idno>
+               </msIdentifier>
+               <p>Texte issu de wikisource France :
+                  https://fr.wikisource.org/wiki/Séquence_de_sainte_Eulalie</p>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date>880</date>
+            <country>Abbaye de Saint-Amant</country>
+            <lang xml:lang="fro"/>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <head>Séquence de saint Eulalie</head>
+         <pb facs="https://gallica.bnf.fr/ark:/12148/btv1b84526286/f288.item" n="141v"/>
+         <lg type="cantilene">
+            <l facs="#l1">Buona pulcella fut <choice>
+                  <orig>e</orig>
+                  <reg>E</reg>
+               </choice>ulalia.</l>
+            <l facs="#l2">Bel a<choice>
+                  <orig>v</orig>
+                  <reg>u</reg>
+               </choice>ret corps bellezour anima.</l>
+            <lb/>
+            <l facs="#l3">Voldrent la veintre li d<choice>
+                  <orig>õ</orig>
+                  <reg>om</reg>
+               </choice> inimi.</l>
+            <l>Voldrent la faire diavle servir.</l>
+            <lb/>
+            <l>Elle nont eskoltet les mals conselliers.</l>
+            <l>Quelle d<choice>
+                  <orig>õ</orig>
+                  <reg>om</reg>
+               </choice> raneiet chi maent <seg rend="suscrit">sus en ciel</seg>.</l>
+            <lb/>
+            <l>Ne por or ned argent ne paramenz.</l>
+            <l>Por manatce regiel ne preiement.</l>
+            <lb/>
+            <l>Niule cose non la pouret om<g ref="#q1">que</g> pleier.</l>
+            <l>La polle sempre &ntilde-non; amast lo d&obarre-om; <seg rend="suscrit"
+                  >menestier</seg>.</l>
+            <lb/>
+            <l>E por<pc type="reg"> </pc>o fut &pbarre-pre;sentede <choice>
+                  <orig>m</orig>
+                  <reg>M</reg>
+               </choice>aximiien.</l>
+            <l>Chi rex eret a cels dis soure pagiens.</l>
+            <lb/>
+            <l>Il<pc type="reg"> </pc>li en ortet dont lei non<g ref="#q1">que</g> chielt.</l>
+            <l>Qued elle fuiet lo nom &xpi-christi;en.</l>
+            <lb/>
+            <l>Ellent adunet lo suon element</l>
+            <l>Melz sostendreiet les empedementz.</l>
+            <lb/>
+            <l>Quelle &pbarre-pre;desse sa virginit<pc type="reg"> </pc>et.</l>
+            <l>Por<pc type="reg"> </pc>os suret morte a grand honestet.</l>
+            <lb/>
+            <l>Enz enl fou lo getterent com arde tost.</l>
+            <l>Elle colpes &ntilde-non; avret por<pc type="reg"> </pc>o <seg rend="suscrit">nos
+                  coist</seg>.</l>
+            <lb/>
+            <l>A<pc type="reg"> </pc>czo nos voldret concreidre li rex pagiens.</l>
+            <l>Ad une spede li roveret <seg rend="suscrit">tolir lo chief</seg>.</l>
+            <lb/>
+            <l>La domnizelle celle kose &ntilde-non; contredist.</l>
+            <l>Volt lo seule lazsier si ruovet krist.</l>
+            <lb/>
+            <l>In figure de colomb volat a ciel.</l>
+            <l>Tuit oram que por<pc type="reg"> </pc>nos degnet preier.</l>
+            <lb/>
+            <l>Qued avuisset de nos &xps-christus; mercit</l>
+            <l>Post la mort <choice>
+                  <abbr>&amp;</abbr>
+                  <expan>et</expan>
+               </choice> a<pc type="reg"> </pc>lui nos laist <choice>
+                  <orig>v</orig>
+                  <reg>u</reg>
+               </choice>enir.</l>
+            <l>Par souue clementia.</l>
+         </lg>
+      </body>
+   </text>
+</TEI>
