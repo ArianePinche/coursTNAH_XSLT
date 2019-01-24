@@ -12,7 +12,7 @@
 ---
 ## apply-templates et l'attribut mode
 
-« Parfois le même contenu en entrée doit apparaître plusieurs fois dans le document de sortie, formaté selon un modèle différent à chaque fois. [...] Les éléments *xsl:appy-templates* et *xsl:template* peuvent avoir un attribut mode optionnel qui associe différentes règles  à différents usages. L’attribut mode d’un élément *xsl:template* identifie dans quel mode cette règle-modèle devait être activée. Un élément *xsl:apply-template* avec un attribut mode n’active que la règle modèle avec l’attribut mode correspondant. »
+« Parfois le même contenu en entrée doit apparaître plusieurs fois dans le document de sortie, formaté selon un modèle différent à chaque fois. [...] Les éléments *xsl:appy-templates* et *xsl:template* peuvent avoir un attribut mode optionnel qui associe différentes règles  à différents usages. L’attribut mode d’un élément *xsl:template* identifie dans quel mode cette règle-modèle doit être activée. Un élément *xsl:apply-template* avec un attribut mode n’active que la règle modèle avec l’attribut mode correspondant. »
 Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en concentré*, Paris, O’Reilly, 2005, p. 171.
 
 ---
@@ -42,7 +42,7 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
 --- 
 
 ## La création de variables
- « L’élément *xsl:variable* attache une valeur de n’importe quel type (chaîne de caractère, nombre, ensemble de nœuds, etc.) à un nom. Cette variable peut être déréférencée par la suite en utilisant la forme $nom dans une expression Xpath. »
+ « L’élément *xsl:variable* attache une valeur de n’importe quel type (chaîne de caractères, nombre, ensemble de nœuds, etc.) à un nom. Cette variable peut être déréférencée par la suite en utilisant la forme $nom dans une expression Xpath. »
 Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en concentré*, Paris, O’Reilly, 2005, p. 544.
 
 ```XML 

@@ -38,7 +38,7 @@
                         <valItem ident="rimeC"/>
                      </valList>
                   </attDef>
-                  <attDef ident="n" mode="change" usage="req"/>
+                  <attDef ident="n" mode="change" usage="opt"/>
                </attList>
             </elementSpec>
             <elementSpec ident="lg" mode="change">
