@@ -1,0 +1,1735 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="sub"><name type="person" ref="#medea">Medea</name></title>
+                <author n="Sen.">Seneca</author>
+                <editor role="editor" n="Peiper">Rudolf Peiper</editor>
+                <editor role="editor" n="Richter">Gustav Richter</editor>
+                <sponsor>Perseus Project, Tufts University</sponsor>
+                <principal>Gregory Crane</principal>
+                <respStmt>
+                    <resp>Prepared under the supervision of</resp>
+                    <name>Bridget Almas</name>
+                    <name>Lisa Cerrato</name>
+                    <name>David Mimno</name>
+                    <name>Rashmi Singhal</name>
+                </respStmt>
+                <funder n="org:NEH">The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <extent>About 100Kb</extent>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+                <authority>Perseus Project</authority>
+                <date type="release">2009-10-07</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>L. Annaeus Seneca</author>
+                        <title>Tragoediae</title>
+                        <editor role="editor" n="Peiper">Rudolf Peiper</editor>
+                        <editor role="editor" n="Richter">Gustav Richter</editor>
+                        <imprint>
+                            <pubPlace>Leipzig</pubPlace>
+                            <publisher>Teubner</publisher>
+                            <date>1921</date>
+                        </imprint>
+                    </monogr>
+                    <ref
+                        target="https://archive.org/stream/senecaetragoedi00senegoog#page/n168/mode/2up"
+                        >Internet Archive</ref>
+                </biblStruct>
+                <listPerson>
+                    <person xml:id="medea">
+                        <persName xml:lang="eng">Medea</persName>
+                    </person>
+                    <person xml:id="iason">
+                        <persName xml:lang="eng">Iason</persName>
+                    </person>
+                    <person xml:id="creon">
+                        <persName xml:lang="eng">creo</persName>
+                    </person>
+                    <person xml:id="nutrix">
+                        <persName xml:lang="eng">Nutrix</persName>
+                    </person>
+                    <person xml:id="nuntius">
+                        <persName xml:lang="eng">Nuntius</persName>
+                    </person>
+                    <person xml:id="chorus">
+                        <persName xml:lang="eng">Chorus Corinthiorum</persName>
+                    </person>
+                    <person xml:id="hyllus">
+                        <persName xml:lang="eng">Hyllus</persName>
+                    </person>
+                </listPerson>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <refsDecl n="CTS">
+                <cRefPattern n="line" matchPattern="(\w+)"
+                    replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+                    <p>This pointer pattern extracts line</p>
+                </cRefPattern>
+            </refsDecl>
+            <refsDecl n="TEI.2">
+                <refState unit="card"/>
+            </refsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="lat">Latin</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change who="gcrane" when="2009-01-01">tagging</change>
+            <change when="2015-11-12" who="Thibault Clerice">New URN, Epidoc and CTS</change>
+            <change when="2018-12-19" who="Ariane Pinche">Modifié pour exercice XSL</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text n="Med.">
+        <body>
+            <div xml:lang="lat" type="edition" n="urn:cts:latinLit:phi1017.phi004.perseus-lat2">
+
+
+                <milestone n="1" unit="card"/>
+                <pb n="p.119"/>
+
+               <div> <sp who="#medea">
+                    <speaker><name type="person" ref="#medea">Medea</name></speaker>
+
+                    <l>Di coniugales tuque genialis tori,</l>
+                    <l>Lucina, custos quaeque domituram freta</l>
+                    <l>Tiphyn novam frenare docuisti ratem,</l>
+                    <l>et tu, profundi saeve dominator maris,</l>
+                    <l>clarumque Titan dividens orbi diem, </l>
+                    <l>tacitisque praebens conscium sacris iubar</l>
+                    <l><name type="person">Hecate</name> triformis, quosque iuravit mihi</l>
+                    <l>deos <name type="person" ref="#iason">Iason</name>, quosque <name type="person" ref="#medea">Medea</name>e magis</l>
+                    <l>fas est precari: noctis aeternae chaos,</l>
+                    <l>aversa superis regna manesque impios </l>
+                    <l>dominumque regni tristis et dominam fide</l>
+                    <l>meliore raptam, voce non fausta precor,</l>
+                    <l>nunc, nunc adeste, sceleris ultrices deae,</l>
+                    <l>crinem solutis squalidae serpentibus,</l>
+                    <l>atram cruentis manibus amplexae facem, </l>
+                    <l>adeste, thalamis horridae quondam meis</l>
+                    <l>quales stetistis: coniugi letum novae</l>
+                    <l>letumque socero et regiae stirpi date,</l>
+                    <l>date peius aliud, quod precer sponso malum:</l>
+                    <l>vivat, per urbes erret ignotas egens </l>
+                    <l>exul pavens invisus incerti laris,</l>
+                    <l>iam notus hospes limen alienum expetat,</l>
+                    <l>me coniugem optet quoque non aliud queam</l>
+                    <pb n="p.120"/>
+                    <l>peius precari, liberos similes patri "</l>
+                    <l>similesque matri, parta iam, parta ultio est: </l>
+                    <l>peperi, querelas verbaque in cassum sero?</l>
+                    <l>non ibo in hostes? manibus excutiam faces</l>
+                    <l>caeloque lucem, spectat hoc nostri sator </l>
+                    <l>Sol generis, et spectatur, et curru insidens </l>
+                    <l>per solita puri spatia decurrit poli? </l>
+                    <l>non redit in ortus et remetitur diem?</l>
+                    <l>da, da per auras curribus patriis vehi,</l>
+                    <l>committe habenas, genitor, et flagrantibus</l>
+                    <l>ignifera loris tribue moderari iuga:</l>
+                    <l>gemino Corinthos litore opponens moras </l>
+                    <l>cremata flammis maria committat duo.</l>
+                    <l>hoc restat unum, pronubam thalamo feram</l>
+                    <l>ut ipsa pinum postque sacrificas preces</l>
+                    <l>caedam dicatis victimas altaribus,</l>
+                    <l>per viscera ipsa quaere supplicio viam, </l>
+                    <l>si vivis, anime, si quid antiqui tibi</l>
+                    <l>remanet vigoris; pelle femineos metus</l>
+                    <l>et inhospitalem Caucasum mente indue,</l>
+                    <l>quodcumque vidit Pontus aut Phasis nefas,</l>
+                    <l>videbit Isthmos. effera ignota horrida, </l>
+                    <l>tremenda caelo pariter ac terris mala</l>
+                    <l>mens intus agitat: vulnera et caedem et vagum</l>
+                    <l>funus per artus— levia memoravi nimis:</l>
+                    <l>haec virgo feci; gravior exurgat dolor:</l>
+                    <l>maiora iam me scelera post partus decent. </l>
+                    <l>accingere ira teque in exitium para</l>
+                    <l>furore toto. paria narrentur tua</l>
+                    <l>repudia thalamis: quo virum linques modo?</l>
+                    <l>hoc quo secuta es. rumpe iam segnes moras:</l>
+                    <l>quae scelere parta est, scelere linquenda est domus. </l>
+                </sp>
+                <milestone n="56" unit="card"/>
+                <pb n="p.121"/>
+                <sp who="#chorus">
+                    <speaker>Chorus</speaker>
+                    <l>Ad regum thalamos numine prospero</l>
+                    <l>qui caelum superi quique regnat fretum</l>
+                    <l>assint cum populis rite faventibus,</l>
+                    <l>primum sceptriferis colla Tonantibus</l>
+                    <l>taurus celsa ferat tergore candido; </l>
+                    <l>Latinam nivei femina corporis</l>
+                    <l>intemptata iugo placet et asperi</l>
+                    <l>Martis sanguineas quae cohibet manus,</l>
+                    <l>quae dat belligeris foedera gentibus</l>
+                    <l>et cornu retinet divite copiam, </l>
+                    <l>donetur tenera mitior hostia,</l>
+                    <l>et tu, qui facibus legitimis ades,</l>
+                    <l>noctem discutiens auspice dextera</l>
+                    <l>huc incede gradu marcidus ebrio,</l>
+                    <l>praecingens roseo tempora vinculo. </l>
+                    <l>et tu quae, gemini praevia temporis,</l>
+                    <l>tarde, stella, redis semper amantibus:</l>
+                    <l>te matres, avide te cupiunt nurus</l>
+                    <l>quamprimum radios spargere lucidos.</l>
+                    <l>Vincit virgineus decor </l>
+                    <l>longe Cecropias nurus,</l>
+                    <l>et quas Taygeti iugis</l>
+                    <l>exercet iuvenum modo</l>
+                    <l>muris quod caret oppidum,</l>
+                    <l>et quas Aonius latex </l>
+                    <l>Alpheosque sacer lavat.</l>
+                    <l>Si forma velit aspici,</l>
+                    <l>cedent Aesonio duci</l>
+                    <pb n="p.122"/>
+                    <l>proles fulminis improbi</l>
+                    <l>aptat qui iuga tigribus. </l>
+                    <l>nec non, qui tripodas movet,</l>
+                    <l>frater virginis asperae,</l>
+                    <l>cedet Castore cum suo</l>
+                    <l>Pollux caestibus aptior.</l>
+                    <l>sic, sic, caelicolae, precor, </l>
+                    <l>vincat femina coniuges,</l>
+                    <l>vir longe superet viros.</l>
+                    <l>Haec cum femineo .constitit in choro,</l>
+                    <l>unius facies praenitet omnibus.</l>
+                    <l>sic cum sole perit sidereus decor, </l>
+                    <l>et densi latitant Pleiadum greges</l>
+                    <l>cum Phoebe solidum lumine non suo</l>
+                    <l>orbem circuitis cornibus alligat.</l>
+                    <l>ostro sic niveus puniceo color</l>
+                    <l>perfusus rubuit, sic nitidum iubar </l>
+                    <l>pastor luce nova roscidus aspicit.</l>
+                    <l>ereptus thalamis Phasidis horridi,</l>
+                    <l>effrenae solitus pectora coniugis</l>
+                    <l>invita trepidus prendere dextera,</l>
+                    <l>felix Aeoliam corripe virginem . </l>
+                    <l>nunc primum soceris, sponse, volentibus.</l>
+                    <l>concesso, iuvenes, ludite iurgio,</l>
+                    <l>hinc illinc, iuvenes, mittite carmina:</l>
+                    <l>rara est in dominos iusta licentia.</l>
+                    <l>Candida thyrsigeri proles generosa Lyaei, </l>
+                    <l>multifidam iam tempus erat succendere pinum:</l>
+                    <l>excute sollemnem digitis marcentibus ignem.</l>
+                    <pb n="p.123"/>
+                    <l>festa dicax fundat convicia fescenninus.</l>
+                    <l>solvat turba iocos— tacitis eat illa tenebris,</l>
+                    <l>si qua peregrino nubit fugitiva marito. </l>
+                </sp>
+               </div>
+               <div> <milestone n="116" unit="card"/>
+                <sp who="#medea #nutrix">
+                    <speaker><name type="person" ref="#medea">Medea</name> Nvtrix</speaker>
+                    <l>Occidimus, aures pepulit hymenaeus meas.</l>
+                    <l>vix ipsa tantum, vix adnue credo malum,</l>
+                    <l>hoc facere <name type="person" ref="#iason">Iason</name> potuit, erepto patre</l>
+                    <l>patria atque regno sedibus solam exteris</l>
+                    <l>deserere durus? merita contempsit mea </l>
+                    <l>qui scelere flammas viderat vinci et mare?</l>
+                    <l>adeone credit omne consumptum nefas?</l>
+                    <l>incerta vaecors mente vaesana feror</l>
+                    <l>partes in omnes; unde me ulcisci queam?</l>
+                    <l>utinam esset illi frater! est coniunx: in hanc </l>
+                    <l>ferrum exigatur. hoc meis satis est malis?</l>
+                    <l>si quod Pelasgae, si quod urbes barbarae</l>
+                    <l>novere facinus quod tuae ignorent manus,</l>
+                    <l>nunc est parandum. scelera te hortentur tua</l>
+                    <l>et cuncta redeant f inclitum regni decus </l>
+                    <l>raptum et nefandae virginis parvus comes</l>
+                    <l>divisus ense, funus ingestum. patri</l>
+                    <l>sparsum que ponto corpus et Peliae senis</l>
+                    <l>decocta aeno membra: funestum impie</l>
+                    <l>quam saepe fudi sanguinem, et nullum scelus </l>
+                    <l>irata feci: suasit infelix amor.</l>
+                    <l>Quid tamen <name type="person" ref="#iason">Iason</name> potuit, alieni arbitri</l>
+                    <l>iurisque factus? debuit ferro obvium</l>
+                    <l>offerre pectus— melius, a melius, dolor</l>
+                    <l>furiose, loquere, si potest, vivat meus, </l>
+                    <pb n="p.124"/>
+                    <l>ut fuit, <name type="person" ref="#iason">Iason</name>; si minus, vivat tamen</l>
+                    <l>memorque nostri muneris parcat mihi.</l>
+                    <l>culpa est <name type="person" ref="#creo">creo</name>ntis tota, qui sceptro impotens</l>
+                    <l>coniugia solvit quique genetricem abstrahit</l>
+                    <l>gnatis et arto pignore astrictam fidem </l>
+                    <l>dirimit: petatur solus hic, poenas luat</l>
+                    <l>quas debet, alto cinere cumulabo domum;</l>
+                    <l>videbit atrum verticem flammis agi</l>
+                    <l>Malea longas navibus flectens moras.</l>
+                </sp>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l>Sile, obsecro, questusque secreto abditos </l>
+                    <l>manda dolori, gravia quisquis vulnera</l>
+                    <l>patiente et aequo mutus animo pertulit,</l>
+                    <l>referre potuit: ira quae tegitur nocet;</l>
+                    <l>professa perdunt odia vindictae locum.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Levis est dolor qui capere consilium potest </l>
+                    <l>et clepere sese: magna non latitant mala.</l>
+                    <l part="I">libet ire contra,</l>
+                </sp>
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="F">Siste furialem impetum,</l>
+                    <l>alumna: vix te tacita defendit quies.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Fortuna fortes metuit, ignavos premit.</l>
+                </sp>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l>Tunc est probanda, si locum virtus habet. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Numquam potest non esse virtuti locus.</l>
+                </sp>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l>Spes nulla rebus monstrat adflictis viam.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Qui nil potest sperare, desperet nihil.</l>
+                </sp>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l>Abiere Colchi, coniugis nulla est fides</l>
+                    <l>nihilque superest opibus e tantis tibi. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l><name type="person" ref="#medea">Medea</name> superest, hic mare et terras vides</l>
+                    <l>ferrumque et ignes et deos et fulmina.</l>
+                </sp>
+                <milestone n="168" unit="card"/>
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="I">Rex est timendus,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Rex meus fuerat pater.</l>
+                </sp>
+
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="I">Non metuis arma?</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Sint licet terra edita.</l>
+                </sp>
+
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="F">Moriere.</l>
+                </sp>
+                <sp who="#nutrix">
+                    <speaker>Med.</speaker>
+                    <l part="F">Cupio.</l>
+                </sp>
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="F">Profuge.</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F" n="170d">Paenituit fugae. </l>
+
+                </sp>
+                <pb n="p.125"/>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="I"><name type="person" ref="#medea">Medea</name></l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="I">Fiam</l>
+                </sp>
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="I">Mater es.</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Cui sim vides.</l>
+                </sp>
+
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="I">Profugere dubitas?</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Fugiam, ut ulciscar prius.</l>
+                </sp>
+
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="I">Vindex sequetur,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Forsan inveniam moras.</l>
+                </sp>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l>Compesce verba, parce iam, demens, minis</l>
+
+                    <l>animosque minue: tempori aptari decet. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Fortuna opes auferre, non animum potest,</l>
+                    <l>sed cuius ictu regius cardo strepit?</l>
+                    <l>ipse' est Pelasgo tumidus imperio <name type="person" ref="#creo">creo</name>.</l>
+                </sp>
+
+                <sp who="#creon medea">
+                    <speaker><name type="person" ref="#creo">creo</name> <name type="person" ref="#medea">Medea</name></speaker>
+                    <l><name type="person" ref="#medea">Medea</name>, Colchi noxium Aeetae genus,</l>
+                    <l>nondum meis exportat e regnis pedem? </l>
+                    <l>molitur aliquid: nota fraus, nota est manus,</l>
+                    <l>cui parcet illa quemve securum sinet?</l>
+                    <l>abolere propere pessimam ferro luem</l>
+                    <l>equidem parabam: precibus evicit gener,</l>
+                    <l>concessa vita est, liberet fines metu </l>
+                    <l>abeatque tuta. fert gradum contra ferox</l>
+                    <l>minaxque nostros propius affatus petit,</l>
+                    <l>arcete, famuli, tactu et accessu procul,</l>
+                    <l>iubete sileat. regium imperium pati</l>
+                    <l>aliquando discat, vade veloci fuga </l>
+                    <l>monstrumque saevum horribile iamdudum avehe.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Quod crimen aut quae culpa multatur fuga?</l>
+                </sp>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Quae causa pellat, innocens mulier rogat.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Si iudicas, cognosce, si regnas, iube.</l>
+                </sp>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Aequum atque iniquum regis imperium feras. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Iniqua numquam regna perpetuo manent.</l>
+                </sp>
+                <pb n="p.126"/>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l part="I">I, querere Colchis,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Redeo: qui advexit, ferat.</l>
+                </sp>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Vox constitute sera decreto venit.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Qui statuit aliquid parte inaudita altera,</l>
+                    <l>aequum licet statuerit, haud aequus fuit. </l>
+                    <l>C R. Auditus a te Pelia supplicium tulit?</l>
+                    <l>sed fare, causae detur egregiae locus.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Difficile quam sit animum ab ira flectere</l>
+                    <l>iam concitatum quamque regale hoc putet</l>
+                    <l>sceptris superbas quisquis admovit manus, </l>
+                    <l>qua coepit ire, regia didici mea.</l>
+                    <l>quamvis enim sim clade miseranda obruta,</l>
+                    <l>expulsa supplex sola deserta, undique</l>
+                    <l>adflicta, quondam nobili falsi patre</l>
+                    <l>avoque clarum Sole deduxi genus. </l>
+                    <l>quodcumque placidis flexibus Phasis rigat</l>
+                    <l>Pontusque quicquid Scythicus a tergo videt,</l>
+                    <l>palustribus qua maria dulcescunt aquis,</l>
+                    <l>armata peltis quicquid exterret cohors</l>
+                    <l>inclusa ripis vidua Thermodontiis, </l>
+                    <l>hoc omne noster genitor imperio regit.</l>
+                    <l>generosa, felix, decore regali potens</l>
+                    <l>fulsi: petebant tunc meos thalamos proci,</l>
+                    <l>qui nunc petuntur. rapida fortuna ac levis</l>
+                    <l>praecepsque regno eripuit, exilio dedit. </l>
+                    <l>confide regnis, cum levis magnas opes</l>
+                    <l>huc ferat et illuc casus— hoc reges habent</l>
+                    <l>magnificum et ingens, nulla quod rapiat dies:</l>
+                    <l>prodesse miseris, supplices fido lare</l>
+                    <l>protegere, solum hoc Colchico regno extuli, </l>
+                    <l>decus illud ingens Graeciae et florem inclitum,</l>
+                    <pb n="p.127"/>
+                    <l>praesidia Achivae gentis et prolem deum,</l>
+                    <l>servasse memet, munus est Orpheus meum,</l>
+                    <l>qui saxa cantu mulcet et silvas trahit,</l>
+                    <l>geminum que numen Castor et Pollux meum est </l>
+                    <l>satique Borea quique trans Pontum quoque</l>
+                    <l>summota Lynceus lumine inmisso videt,</l>
+                    <l>omnesque Minyae: nam ducem taceo ducum,</l>
+                    <l>pro quo nihil debetur: hunc nulli imputo;</l>
+                    <l>vobis revexi ceteros, unum mihi. </l>
+                    <l>incesse nunc et cuncta flagitia ingere.</l>
+                    <l>fatebor: obici crimen hoc solum potest,</l>
+                    <l>Argo reversa, virgini placeat pudor</l>
+                    <l>paterque placeat: tota cum ducibus ruet</l>
+                    <l>Pelasga tellus, hic tuus primum gener </l>
+                    <l>tauri ferocis ore flammanti occidet.</l>
+                    <l>fortuna causam quae volet nostram premat,</l>
+                    <l>non paenitet servasse tot regum decus.</l>
+                    <l>quodcumque culpa praemium ex omni tuli,</l>
+                    <l>hoc est penes te. si placet, damna ream; </l>
+                    <l>sed redde crimen, sum nocens, fateor, <name type="person" ref="#creo">creo</name>:</l>
+                    <l>talem sciebas esse, cum genua attigi</l>
+                    <l>fidemque supplex praesidis dextrae peti;</l>
+                    <l>terra hac miseriis angulum ac sedem rogo</l>
+                    <l>latebrasque viles: urbe si pelli placet, </l>
+                    <l>detur remotus aliquis in regnis locus.</l>
+                </sp>
+                <milestone n="252" unit="card"/>
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Non esse me qui sceptra violentus geram</l>
+                    <l>nec qui superbo miserias calcem pede,</l>
+                    <l>testatus equidem videor haud clare parum</l>
+                    <l>generum exulem legendo et adflictum et gravi </l>
+                    <pb n="p.128"/>
+                    <l>terrore pavidum, quippe quem poenae expetit</l>
+                    <l>letoque Acastus regna Thessalica optinens.</l>
+                    <l>senio trementem debili atque aevo gravem</l>
+                    <l>patrem peremptum queritur et caesi senis</l>
+                    <l>discissa membra, cum dolo captae tuo </l>
+                    <l>piae sorores impium auderent nefas.</l>
+                    <l>potest <name type="person" ref="#iason">Iason</name>, si tuam causam amoves,</l>
+                    <l>suam tueri: nullus innocuum cruor</l>
+                    <l>contaminavit, afuit ferro manus</l>
+                    <l>proculque vestro purus a coetu stetit. </l>
+                    <l>tu, tu malorum machinatrix facinorum,</l>
+                    <l>cui feminae nequitia ad audenda omnia,</l>
+                    <l>robur virile est, nulla famae memoria,</l>
+                    <l>egredere, purga regna, letales simul</l>
+                    <l>tecum aufer herbas, libera cives metu, </l>
+                    <l>alia sedens tellure sollicita deos.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Profugere cogis? redde fugienti ratem</l>
+                    <l>vel redde comitem— fugere cur solam iubes?</l>
+                    <l>non sola veni. bella si metuis pati,</l>
+                    <l>utrumque regno pelle, cur sontes duos </l>
+                    <l>distinguis? illi Pelia, non nobis iacet;</l>
+                    <l>fugam, rapinas adice, desertum patrem</l>
+                    <l>lacerum que fratrem, quicquid etiam nunc novas</l>
+                    <l>docet maritus coniuges, non est meum:</l>
+                    <l>totiens nocens sum facta, sed numquam mihi. </l>
+                </sp>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Iam exisse decuit, quid seris fando moras?</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Supplex recedens illud extremum precor,</l>
+                    <l>ne culpa natos matris insontes trahat.</l>
+                </sp>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Vade: hos paterno ut genitor excipiam sinu.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Per ego auspicatos regii thalami toros, </l>
+                    <pb n="p.129"/>
+                    <l>per spes futuras perque regnorum status,</l>
+                    <l>Fortuna varia dubia quos agitat vice,</l>
+                    <l>precor, brevem largire fugienti moram,</l>
+                    <l>dum extrema natis mater infigo oscula,</l>
+                    <l part="I">fortasse moriens.</l>
+                </sp>
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l part="F">Fraudibus tempus petis. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Quae fraus timeri tempore exiguo potest?</l>
+                </sp>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Nullum ad nocendum tempus angustum est malis.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Parumne miserae temporis lacrimis negas?</l>
+                </sp>
+
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l>Etsi repugnat precibus infixus timor,</l>
+                    <l>unus parando dabitur exilio dies. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Nimis est, recidas aliquid ex isto licet:</l>
+                    <l part="I">et ipsa propero.</l>
+                </sp>
+                <sp who="#creon">
+                    <speaker>Cr.</speaker>
+                    <l part="F">Capite supplicium lues,</l>
+                    <l>clarum priusquam Phoebus attollat diem</l>
+                    <l>nisi cedis Isthmo. sacra me thalami vocant,</l>
+                    <l>vocat precari festus Hymenaeo dies. </l>
+                </sp>
+                <milestone n="301" unit="card"/>
+                <sp who="#chorus">
+                    <speaker>Chorus</speaker>
+                    <l>Audax nimium qui freta primus</l>
+                    <l>rate tam fragili perfida rupit</l>
+                    <l>terrasque suas posterga videns</l>
+                    <l>animam levibus credidit auris,</l>
+                    <l>dubioque secans aequora cursu </l>
+                    <l>potuit tenui fidere ligno</l>
+                    <l>inter vitae mortisque vias</l>
+                    <l>nimium gracili limite ducto. </l>
+
+                    <l>Candida nostri saecula patres </l>
+                    <l>videre, procul fraude remota. </l>
+                    <l>sua quisque piger litora tangens</l>
+                    <l>patrioque senex factus in arvo,</l>
+                    <l>parvo dives, nisi quas tulerat</l>
+                    <pb n="p.130"/>
+
+                    <l>natale solum, non norat opes: </l>
+
+                    <l>nondum quisquam sidera norat. </l>
+                    <l>stellisque quibus pingitur aether </l>
+                    <l>non erat usus. nondum pluvias</l>
+                    <l>Hyadas poterat vitare ratis.</l>
+                    <l>non Oleniae lumina caprae,</l>
+                    <l>nec quae sequitur flectitque senex</l>
+                    <l>Attica tardus plaustra Bootes, </l>
+                    <l>nondum Boreas,</l>
+                    <l>nondum Zephyrus nomen habebant.</l>
+                    <l>Ausus Tiphys pandere vasto</l>
+                    <l>carbasa ponto</l>
+                    <l>legesque novas scribere ventis: </l>
+                    <l>nunc lina sinu tendere toto,</l>
+                    <l>nunc prolato pede transversos</l>
+                    <l>captare notos, nunc antemnas</l>
+                    <l>medio tutas ponere malo,</l>
+                    <l>nunc in summo religare loco, </l>
+                    <l>cum iam totos avidus nimium</l>
+                    <l>navita flatus optat et alto</l>
+                    <l>rubicunda tremunt sipara velo. </l>
+
+                    <l>b«ne dissaepti foedera mundi </l>
+                    <l>traxit in unum Thessala pinus</l>
+                    <l>iussitque pati verbera pontum,</l>
+                    <l>partemque metus fieri nostri</l>
+                    <l>mare sepositum.</l>
+                    <l>dedit illa graves improba poenas </l>
+                    <l>per tam longos ducta timores,</l>
+                    <l>cum duo montes, claustra profundi,</l>
+                    <l>hinc atque illinc subito impulsu</l>
+                    <l>velut aetherio gemerent sonitu,</l>
+                    <l>nubesque ipsas</l>
+
+                    <l>mare deprensum spargeret austris. </l>
+                    <pb n="p.131"/>
+                    <l>palluit audax Tiphys et omnes</l>
+                    <l>labente manu misit habenas,</l>
+                    <l>Orpbeus tacuit torpente lyra</l>
+                    <l>ipsaque vocem perdidit Argo.</l>
+                    <l>quid cum Siculi virgo Pelori, </l>
+                    <l>rabidos utero succincta canes,</l>
+                    <l>omnis pariter solvit hiatus? '</l>
+                    <l>quis non totos horruit artus</l>
+                    <l>totiens uno latrante malo?</l>
+                    <l>quid cum Ausonium dirae pestes </l>
+                    <l>voce canora mare mulcerent.</l>
+                    <l>cum Pieria resonans cithara</l>
+                    <l>Thracius Orpheus</l>
+                    <l>solitam cantu retinere rates</l>
+                    <l>paene coegit Sirena sequi? </l>
+                    <l>quod fuit huius pretium cursus?</l>
+                    <l>aurea pellis</l>
+                    <l>maiusque mari <name type="person" ref="#medea">Medea</name> malum,</l>
+                    <l>merces prima digna carina.</l>
+                    <l>Nunc iam cessit pontus et omnes</l>
+
+                    <l>patitur leges: non Palladia </l>
+                    <l>compacta manu regum referens</l>
+                    <l>inclita remos quaeritur Argo—</l>
+                    <l>quaelibet altum cumba pererrat;</l>
+                    <l>terminus omnis motus et urbes</l>
+                    <l>muros terra posuere nova, </l>
+                    <l>nil qua fuerat sede reliquit</l>
+                    <l>pervius orbis:</l>
+                    <l>Indus gelidum potat Araxen,</l>
+                    <l>Albin Persae Rhenumque bibunt.</l>
+                    <l>venient annis saecula seris, </l>
+                    <l>quibus Oceanus vincula rerum</l>
+                    <l>laxet et ingens pateat tellus</l>
+                    <pb n="p.132"/>
+                    <l>Tethysque novos detegat orbes</l>
+                    <l>nec sit terris ultima Thule.</l>
+                </sp></div>
+                <div><milestone n="380" unit="card"/>
+                <sp who="#nutrix medea">
+                    <speaker>Nvtrix <name type="person" ref="#medea">Medea</name></speaker>
+                    <l>Alumna, celerem quo rapis tectis pedem? </l>
+                    <l>resiste et iras comprime ac retine impetum.</l>
+                    <l>Incerta qualis entheos gressus tulit</l>
+                    <l>cum iam recepto maenas insanit deo</l>
+                    <l>Pindi nivalis vertice aut Nysae iugis,</l>
+                    <l>talis recursat huc et huc motu effero, </l>
+                    <l>furoris ore signa lymphati gerens,</l>
+                    <l>flammata facies spiritum ex alto citat,</l>
+                    <l>proclamat, oculos uberi fletu rigat,</l>
+                    <l>renidet: omnis specimen affectus capit,</l>
+
+                    <l>quo pondus animi vergat, ubi ponat minas, </l>
+
+                    <l>haeret: minatur aestuat queritur gemit. </l>
+
+                    <l>ubi se iste fluctus franget? exundat furor. </l>
+                    <l>non facile secum versat aut medium scelus;</l>
+                    <l>se vincet: irae novimus veteris notas,</l>
+                    <l>magnum aliquid instat, efferum immane impium: </l>
+                    <l>vultum furoris cerno, di fallant metum!</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Si quaeris odio, misera, quem statuas modum :</l>
+                    <l>imitare amorem, regias egone ut faces</l>
+                    <l>inulta patiar? segnis hic ibit dies,</l>
+                    <l>tanto petitus ambitu, tanto datus? </l>
+                    <l>dum terra caelum media libratum feret</l>
+                    <l>nitidusque certas mundus evolvet vices</l>
+                    <l>numerosque harenis derit et solem dies,</l>
+                    <l>noctem sequentur astra, dum siccas polus</l>
+                    <pb n="p.133"/>
+                    <l>versabit Arctos, flumina in pontum cadent. </l>
+                    <l>numquam meus cessabit in poenas furor</l>
+                    <l>crescetque semper, quae ferarum immanitas,</l>
+                    <l>quae Scylla, quae Charybdis Ausonium mare</l>
+                    <l>Siculumque sorbens quaeve anhelantem premens</l>
+                    <l>Titana tantis Aetna fervebit minis? </l>
+                    <l>non rapidus amnis, non procellosum mare</l>
+                    <l>Pontusve coro saevus aut vis ignium</l>
+                    <l>adiuta flatu possit inhibere impetum</l>
+                    <l>irasque nostras: sternam et evertam omnia.</l>
+                    <l>Timuit <name type="person" ref="#creo">creo</name>ntem ac bella Thessalici ducis? </l>
+                    <l>amor timere neminem verus potest,</l>
+                    <l>sed cesserit coactus et dederit manus:</l>
+                    <l>adire certe et coniugem extremo alioqui</l>
+                    <l>sermone potuit— hoc quoque extimuit ferox;</l>
+                    <l>laxare certe tempus immitis fugae </l>
+                    <l>genero licebat— liberis unus dies</l>
+                    <l>datus est duobus, non queror tempus breve:</l>
+                    <l>multum patebit. faciet hic faciet dies</l>
+                    <l>quod nullus umquam taceat— invadam deos</l>
+                    <l part="I">et cuncta quatiam.</l>
+                </sp>
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l part="F">Recipe turbatum malis. </l>
+                    <l part="I">era, pectus, animum mitiga.</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Sola est quies,</l>
+                    <l>mecum ruina cuncta si video obruta:</l>
+                    <l>mecum omnia abeant. trahere, cum pereas, libet.</l>
+                </sp>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l>Quam multa sint timenda, si perstas, vide:</l>
+                    <l>nemo potentes aggredi tutus potest. </l>
+                </sp>
+
+                <sp who="#iason medea">
+                    <speaker><name type="person" ref="#iason">Iason</name> <name type="person" ref="#medea">Medea</name></speaker>
+                    <l>O dura fata semper et sortem asperam,</l>
+                    <l>cum saevit et cum parcit ex aequo malam!</l>
+                    <pb n="p.134"/>
+                    <l>remedia quotiens invenit nobis deus</l>
+                    <l>periculis peiora: si vellem fidem</l>
+                    <l>praestare meritis coniugis, leto fuit </l>
+                    <l>caput offerendum; si mori nollem, fide</l>
+                    <l>misero carendum, non timor vicit fidem,</l>
+                    <l>sed trepida pietas: quippe sequeretur necem</l>
+                    <l>proles parentum, sancta si caelum incolis</l>
+                    <l>Iustitia, numen invoco ac testor tuum: </l>
+                    <l>nati patrem vicere. quin ipsam quoque,</l>
+                    <l>etsi ferox est corde nec patiens iugi,</l>
+                    <l>consulere natis malle quam thalamis reor.</l>
+                    <l>constituit animus precibus iratam aggredi.</l>
+                    <l>atque ecce, viso memet exiluit, furit, </l>
+                    <l>fert odia prae se: totus in vultu est dolor.</l>
+                </sp>
+                <milestone n="447" unit="card"/>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Fugimus, <name type="person" ref="#iason">Iason</name>: fugimus— hoc non est novum,</l>
+                    <l>mutare sedes; causa fugiendi nova est:</l>
+                    <l>pro te solebam fugere, discedo exeo,</l>
+                    <l>penatibus profugere quam cogis tuis: </l>
+                    <l>at quo remittas? Phasin et Colchos petam</l>
+                    <l>patriumque regnum quaeque fraternus cruor</l>
+                    <l>perfudit arva? quas peti terras iubes?</l>
+                    <l>quae maria monstras? Pontici fauces freti</l>
+                    <l>per quas revexi nobilem regum manum 455</l>
+                    <l>adulterum secuta per Symplegadas?</l>
+                    <l>parvamne lolcon, Thessala an Tempe petam?</l>
+                    <l>quascumque aperui tibi vias, clausi mihi—</l>
+                    <l>quo me remittis? exuli exilium imperas</l>
+                    <pb n="p.135"/>
+                    <l>nec das. eatur. regius iussit gener: </l>
+                    <l>nihil recuso, dira supplicia ingere:</l>
+                    <l>merui cruentis paelicem poenis premat</l>
+                    <l>regalis ira, vinculis oneret manus</l>
+                    <l>clausamque saxo noctis aeternae obruat:</l>
+                    <l>minora meritis patiar— ingratum caput, </l>
+                    <l>revolvat animus igneos tauri halitus</l>
+                    <l>
+                        <del>interque saevos gentis indomitae metus</del>
+                    </l>
+                    <l>
+                        <del>armifero in arvo flanimeum Aeetae pecus,</del>
+                    </l>
+                    <l>hostisque subiti tela, cum iussu meo</l>
+                    <l>terrigena miles mutua caede occidit; </l>
+                    <l>adice expetita spolia Phrixei arietis</l>
+                    <l>somnoque iussum lumina ignoto dare</l>
+                    <l>insomne monstrum, traditum fratrem neci</l>
+                    <l>et scelere in uno non semel factum scelus,</l>
+                    <l>ausasqne natas fraude deceptas mea </l>
+                    <l>secare membra non revicturi senis:</l>
+
+                    <l>per spes tuorum liberum et certum larem, </l>
+                    <l>per victa monstra, per manus, pro te quibus</l>
+                    <l>numquam peperci, perque prseteritos metus, </l>
+                    <l>per caelum et undas, coniugi testes mei,</l>
+                    <l>miserere, redde supplici felix vicem. </l>
+
+                    <l>aliena quaerens regna deserni mea: </l>
+
+                    <l>ex opibus illis, quas procul raptas Scythae </l>
+                    <l>usque a perustis Indiae populis agunt,</l>
+                    <l>quas quia referta vix domus gaza capit, </l>
+                    <l>ornamus auro nemora, nil exul tuli</l>
+                    <l>nisi fratris artus: hos quoque impendi tibi;</l>
+                    <l>tibi patria cessit, tibi pater, frater, pudor—</l>
+                    <l>hac dote nupsi. redde fugienti sua.</l>
+                </sp>
+                <pb n="p.136"/>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Perimere cum te vellet infestus <name type="person" ref="#creo">creo</name>, </l>
+                    <l>lacrimis meis evictus exilium dedit.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Poenam putabam: munus ut video est fuga.</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Dum licet abire, profuge teque hinc eripe:</l>
+                    <l part="I">gravis ira regum est semper,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Hoc suades mihi,</l>
+                    <l>praestas Creusae: paelicem invisam amoves. </l>
+                </sp>
+
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="I"><name type="person" ref="#medea">Medea</name> amores obicit?</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Et caedem et dolos.</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Obicere tandem quod potes crimen mihi?</l>
+                </sp>
+
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="I">Quodcumque feci.</l>
+                </sp>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="F">Restat hoc unum insuper,</l>
+                    <l>tuis ut etiam sceleribus fiam nocens.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Tua illa, tua sunt illa: cui prodest scelus </l>
+                    <l>is fecit— omnes coniugem infamem arguant,</l>
+                    <l>solus tuere, solus insontem voca:</l>
+                    <l>tibi innocens sit quisquis est pro te nocens.</l>
+                </sp>
+                <milestone n="504" unit="card"/>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Ingrata vita est cuius acceptae pudet.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Retineuda non est cuius acceptae pudet. </l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Quin potius ira concitum pectus doma,</l>
+                    <l part="I">placare natis.</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Abdico eiuro abnuo—</l>
+                    <l>meis Creusa liberis fratres dabit?</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Regina natis exulum, afflictis potens.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Ne veniat umquam tam malus miseris dies, </l>
+                    <l>qui prole foeda misceat prolem inclitam.</l>
+                    <l>
+                        <del>Phoebi nepotes Sisyphi nepotibus</del>
+                    </l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Quid, misera, meque teque in exitium trahis?</l>
+                    <l part="I">abscede quaeso,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Supplicem audivit <name type="person" ref="#creo">creo</name>.</l>
+                </sp>
+
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="I">Quid facere possim, loquere,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F" n="515b">Pro me? vel scelus. </l>
+                </sp>
+
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="I">Hinc rex et illinc—</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Est (et hic maior metus)</l>
+                    <l><name type="person" ref="#medea">Medea</name>, nos † confligere, certemus sine,</l>
+                    <l part="I">sit pretium <name type="person" ref="#iason">Iason</name>.</l>
+                </sp>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="F">Cedo defessus malis.</l>
+                    <pb n="p.137"/>
+                    <l>et ipsa casus saepe iam expertos time.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Fortuna semper omnis infra me stetit. </l>
+                </sp>
+
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="I">Acastus instat,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Propior est hostis <name type="person" ref="#creo">creo</name>:</l>
+                    <l>utrumque profuge. non ut in socerum manus</l>
+                    <l>armes nec ut te caede cognata inquines</l>
+                    <l><name type="person" ref="#medea">Medea</name> cogit: innocens mecum fuge.</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Et quis resistet, gemina si bella ingruant, </l>
+                    <l><name type="person" ref="#creo">creo</name> atque Acastus arma si iungant sua?</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>His adice Colchos, adice et Aeeten ducem,</l>
+                    <l>Scythas Pelasgis iunge: demersos dabo.</l>
+                </sp>
+
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="I">Alta extimesco sceptra,</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Ne cupias vide.</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Suspecta ne sint, longa colloquia amputa. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Nunc summe toto Iuppiter caelo tona,</l>
+                    <l>intende dextram, vindices flammas para</l>
+                    <l>omnemque ruptis nubibus mundum quate.</l>
+                    <l>nec deligenti tela librentur manu</l>
+                    <l>rei me vel istum: quisquis e nobis cadet </l>
+                    <l>nocens peribit, non potest in nos tuum</l>
+                    <l  part="I">errare fulmen,</l>
+                </sp>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="F">Sana meditari incipe</l>
+                    <l>et placida fare, si quod ex soceri domo</l>
+                    <l>potest fugam levare solamen, pete.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Contemnere animus regias, ut scis, opes </l>
+                    <l>potest soletque; liberos tantum fugae</l>
+                    <l>habere comites liceat in quorum' sinu</l>
+                    <l>lacrimas profundam. te novi nati manent.</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>.Parere precibus cupere me fateor tuis;</l>
+                    <l>pietas vetat: namque istud ut possim pati, </l>
+                    <l>non ipse memet cogat et rex et socer.</l>
+                    <l>haec causa vitae est, hoc perusti pectoris</l>
+                    <l>curis levamen. spiritu citius queam</l>
+                    <l part="I">carere, membris, luce.</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Sic natos amat?</l>
+                    <pb n="p.138"/>
+                    <l>bene est, tenetur, vulneri patuit locus.— </l>
+                    <l>suprema certe liceat abeuntem loqui</l>
+                    <l>mandata, liceat ultimum amplexum dare:</l>
+                    <l>gratum est et illud, voce iam extrema peto,</l>
+                    <l>ne, si qua noster dubius effudit dolor,</l>
+                    <l>maneant in animo verba: melioris tibi </l>
+                    <l>memoria nostri sedeat; haec irae data</l>
+                    <l part="I">oblitterentur.</l>
+                </sp>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="F">Omnia ex animo expuli</l>
+                    <l>precorque et ipse, fervidam ut mentem regas</l>
+                    <l>placideque tractes: miserias lenit quies.</l>
+                </sp>
+                <milestone n="560" unit="card"/>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Discessit, itane est? vadis oblitus mei </l>
+                    <l>et tot meorum facinorum? excidimus tibi?</l>
+                    <l>numquam excidemus. hoc age, omnis advoca</l>
+                    <l>vires et artes, fructus est scelerum tibi</l>
+                    <l>nullum scelus putare, vix fraudi est locus:</l>
+                    <l>timemur. hac aggredere, qua nemo potest </l>
+                    <l>quicquam timere, perge, nunc aude, incipe</l>
+                    <l>quicquid potest <name type="person" ref="#medea">Medea</name>, quicquid non potest.</l>
+                    <l>Tu, fida nutrix, socia maeroris mei</l>
+                    <l>variique casus, misera consilia adiuva,</l>
+                    <l>est palla nobis, munus aetherium, domus </l>
+                    <l>decusque regni, pignus Aeetae datum</l>
+                    <l>a Sole generis, est et auro textili</l>
+                    <l>monile fulgens quodque gemmarum nitor</l>
+                    <l>distinguit aurum, quo solent cingi comae,</l>
+                    <l>haec nostra nati dona nubenti ferant, </l>
+                    <l>sed ante diris inlita ac tincta artibus,</l>
+                    <l>vocetur <name type="person">Hecate</name>, sacra letifica appara:</l>
+                    <l>statuantur arae, flamma iam tectis sonet.</l>
+                    <pb n="p.139"/>
+                    <l>Nulla vis flammae tumidive venti</l>
+                    <l>tanta, nec teli metuenda torti, </l>
+                    <l>quanta cum coniunx viduata taedis</l>
+                    <l>ardet et odit;</l>
+                    <l>non ubi hibernos nebulosus imbres</l>
+                    <l>Auster advexit properatque torrens</l>
+                    <l>Hister et iunctos vetat esse pontes </l>
+                    <l>ac vagus errat;</l>
+                    <l>non ubi impellit Rhodanus profundum,</l>
+                    <l>aut ubi in rivos nivibus solutis</l>
+                    <l>sole iam forti medioque vere</l>
+                    <l>tabuit Haemus. </l>
+                    <l>caecus est ignis stimulatus ira</l>
+                    <l>nec regi curat patiturve frenos</l>
+                    <l>aut timet mortem: cupit ire in ipsos</l>
+                    <l>obvius enses.</l>
+                    <l>parcite, o divi, veniam precamur, </l>
+                    <l>vivat ut tutus mare qui subegit,</l>
+                    <l>sed furit vinci dominus profundi</l>
+                    <l>regna secunda.</l>
+                    <l>ausus aeternos agitare currus</l>
+                    <l>immemor metae iuvenis paternae </l>
+                    <l>quos polo sparsit furiosus ignes</l>
+                    <l>ipse recepit.</l>
+                    <pb n="p.140"/>
+                    <l>constitit nulli via nota magno:</l>
+                    <l>vade qua tutum populo priori,</l>
+                    <l>rumpe nec sacro vidente sancta </l>
+                    <l>foedera mundi.</l>
+                    <l>Quisquis audacis tetigit carinae</l>
+                    <l>nobiles remos nemorisque sacri</l>
+                    <l>Pelion densa spoliavit umbra,</l>
+                    <l>quisquis intravit scopulos vagantes </l>
+                    <l>et tot emensus pelagi labores</l>
+                    <l>barbara funem religavit ora</l>
+                    <l>raptor externi rediturus auri,</l>
+                    <l>exitu diro temerata ponti</l>
+                    <l>iura piavit. </l>
+                    <l>exigit poenas mare provocatum:</l>
+                    <l>Tiphys in primis, domitor profundi,</l>
+                    <l>liquit indocto regimen magistro;</l>
+                    <l>litore externo, procul a paternis</l>
+                    <l>occidens regnis tumuloque vili </l>
+                    <l>tectus ignotas iacet inter umbras.</l>
+                    <l>Aulis amissi memor inde regis</l>
+                    <l>portibus lentis retinet carinas</l>
+                    <l>stare querentes.</l>
+                    <l>ille vocali genitus Camena, </l>
+                    <l>cuius ad chordas modulante plectro</l>
+                    <l>restitit torrens, siluere venti,</l>
+                    <l>cura suo cantu volucris relicto</l>
+                    <l>adfuit tota comitante silva,</l>
+                    <l>Thracios sparsus iacuit per agros, </l>
+                    <pb n="p.141"/>
+                    <l>at caput tristi fluitavit Hebro:</l>
+                    <l>contigit notam Styga Tartarumque,</l>
+                    <l>non rediturus.</l>
+                    <l>stravit Alcides Aquilone natos,</l>
+                    <l>patre Neptuno genitum necavit </l>
+                    <l>sumere innumeras solitum figuras:</l>
+                    <l>ipse post terrae pelagique pacem,</l>
+                    <l>post feri Ditis patefacta regna,</l>
+                    <l>vivus ardenti recubans in Oeta</l>
+                    <l>praebuit saevis sua membra flammis, </l>
+                    <l>tabe consumptus gemini cruoris</l>
+                    <l>munere nuptae.</l>
+                    <l>stravit Ancaeum violentus ictu</l>
+                    <l>saetiger; fratrem, Meleagre, matris</l>
+                    <l>impius m actas morerisque dextra </l>
+                    <l>matris iratae, meruere cuncti</l>
+                    <l>morte quod crimen tener expiavit</l>
+                    <l>Herculi magno puer inrepertus,</l>
+                    <l>raptus, heu, tutas puer inter undas,</l>
+                    <l>ite nunc, fortes, perarate pontum </l>
+                    <l>fonte timendo.</l>
+                    <l>Idmonem, quamvis bene fata nosset,</l>
+                    <l>condidit serpens Libycis harenis;</l>
+                    <l>omnibus verax, sibi falsus uni</l>
+                    <l>concidit Mopsus caruitque Thebis. </l>
+                    <l>ille si vere cecinit futura,</l>
+                    <l>exul errabit Thetidis maritus </l>
+                    <pb n="p.142"/>
+
+                    <l>fulmine et ponto moriens Oileus </l>
+
+                    <l>*<gap reason="lost"/>patrioque pendet crimine poenas:</l>
+
+                    <l>igne fallaci nociturus Argis </l>
+                    <l>Nauplius praeceps cadet in profundum, </l>
+
+                    <l>coniugis fatum redimens Pheraei </l>
+                    <l>uxor impendes animam marito,</l>
+                    <l>ipse qui praedam spoliumque iussit</l>
+                    <l>aureum prima revehi carina, </l>
+                    <l>arsit accenso Pelias aeno.</l>
+                    <l>
+                        <del>ustus angustas vagus inter undas.</del>
+                    </l>
+                    <l>iam satis, divi, mare vindicastis:</l>
+                    <l>parcite iusso.</l>
+                </sp></div>
+                <div><milestone n="670" unit="card"/>
+                <sp who="#nutrix">
+                    <speaker>Nvtrix</speaker>
+                    <l>Pavet animus, horret, magna pernicies adest. </l>
+                    <l>immane quantum augescit et semet dolor</l>
+                    <l>accendit ipse vimque praeteritam integrat.</l>
+                    <l>vidi furentem saepe et aggressam deos,</l>
+                    <l>caelum trahentem: maius his, maius parat</l>
+                    <l><name type="person" ref="#medea">Medea</name> monstrum, namque ut attonito gradu </l>
+                    <l>evasit et penetrale funestam attigit,</l>
+                    <l>totas opes effundit et quicquid diu</l>
+                    <l>etiam ipsa timuit promit atque omnem explicat</l>
+                    <l>turbam malorum, arcana secreta abdita,</l>
+                    <pb n="p.143"/>
+                    <l>et triste laeva congregans sacrum manu </l>
+                    <l>pestes vocat quascumque ferventes creat</l>
+                    <l>harena Libyae quasque perpetua nive</l>
+                    <l>Taurus cohercet frigore Arctoo rigens,</l>
+                    <l>et omne monstrum, tracta magicis cantibus</l>
+                    <l>squamifera latebris turba desertis adest. </l>
+                    <l>hic saeva serpens corpus immensum trahit</l>
+                    <l>trifidamque linguam exertat et quaerit quibus</l>
+                    <l>mortifera veniat: carmine audito stupet</l>
+                    <l>tumidumque nodis corpus aggestis plicat</l>
+                    <l>cogitque in orbεs. 'parva sunt' inquit 'mala </l>
+                    <l>et vile telum est. ima quod tellus creat:</l>
+                    <l>caelo petam venena, iam iam tempus est</l>
+                    <l>aliquid movere fraude vulgari altius.</l>
+                    <l>huc ille vasti more torrentis iacens</l>
+                    <l>descendat anguis, cuius immensos duae. </l>
+                    <l>maior minorque, sentiunt nodos ferae</l>
+                    <l>(maior Pelasgis apta. Sidoniis minor)</l>
+                    <l>pressasque tandem solvat Ophiuchus manus</l>
+                    <l>virusque fundat; adsit ad cantus meos</l>
+                    <l>lacessere ausus gemina Python numina. </l>
+                    <l>et Hydra et omnis redeat Herculea manu</l>
+                    <l>succisa serpens, caede se reparans sua.</l>
+                    <l>tu quoque relictis pervigil Colchis ades,</l>
+                    <l>sopite primum cantibus, serpens, meis.'</l>
+                    <l>Postquam evocavit omne serpentum genus, </l>
+                    <l>congerit in unum frugis infaustae mala:</l>
+                    <l>quaecumque generat invius saxis Eryx,</l>
+                    <l>quae fert opertis hieme perpetua iugis</l>
+                    <pb n="p.144"/>
+                    <l>sparsus cruore Caucasus Promethei,</l>
+
+                    <l>et quis sagittas divites Arabes linunt </l>
+
+                    <l>pharetraque pugnax Mediis aut Parthi leves, </l>
+
+                    <l>aut quos sub axe frigido sucos legunt </l>
+                    <l>lucis Suebae nobiles Hyrcaniis;</l>
+                    <l>quodcumque tellus vere nidifico creat</l>
+                    <l>aut rigida cum iam bruma discnssit decus </l>
+                    <l>nemorum et nivali cuncta constrinxit gelu,</l>
+                    <l>quodcumque gramen flore mortifero viret</l>
+                    <l>cuiusve fortis sucus in radicibus</l>
+                    <l>causas nocendi gignit, attrectat manu.</l>
+                    <l>Haemonius illas contulit pestes Athos, </l>
+                    <l>has Pindus ingens, illa Pangaei iugis</l>
+                    <l>teneram cruenta falce deposuit comam;</l>
+                    <l>has aluit altum gurgitem Tigris premens,</l>
+                    <l>Danuvius illas, has per arentes plagas</l>
+                    <l>tepidis Hydaspes gemmifer currens aquis, </l>
+                    <l>nomenque terris qui dedit Baetis suis</l>
+                    <l>Hesperia pulsans maria languenti vado.</l>
+                    <l>haec passa ferrum est, dum parat Phoebus diem,</l>
+                    <l>illius alta nocte succisus frutex;</l>
+                    <l>at huius ungue secta cantato seges. </l>
+                    <l>Mortifera carpit gramina ac serpentium</l>
+                    <l>saniem exprimit miscetque et obscenas aves</l>
+                    <l>maestique cor bubonis et raucae strigis</l>
+                    <l>exsecta vivae viscera, haec scelerum artifex</l>
+                    <l>discreta ponit; his rapax vis ignium, </l>
+                    <l>his gelida pigri frigoris glacies inest.</l>
+                    <pb n="p.145"/>
+                    <l>addit venenis verba non illis minus</l>
+                    <l>metuenda, sonuit ecce vaesano gradu</l>
+                    <l>canitque. mundus vocibus primis tremit.</l>
+                </sp>
+                <milestone n="740" unit="card"/>
+                <sp who="#medea">
+                    <speaker><name type="person" ref="#medea">Medea</name></speaker>
+                    <l>Compreeor vulgus silentum vosque ferales deos </l>
+                    <l>et Chaos caecum atque opacam Ditis umbrosi domum.</l>
+                    <l>Tartari ripis ligatae squalido Mortis specu</l>
+                    <l>supplicis. animae, remissis currite ad thalamos novos:</l>
+                    <l>rota resistat membra torquens, tangat Ixion humum,</l>
+                    <l>Tantalus securus undas hauriat Pirenidas. </l>
+
+                    <l>vos quoque, urnis quas foratis inritus ludit labor, </l>
+                    <l>Danaides, coite: vestras hic. dies quaerit manus. </l>
+
+                    <l>gravior uni poena sedeat coniugis socero mei: </l>
+                    <l>lubricus per saxa retro Sisyphum volvat lapis,</l>
+
+                    <l>nunc meis vocata sacris, noctium sidus, veni </l>
+                    <l>pessimos induta vultus, fronte non una minax.</l>
+                    <l>Tibi move gentis vinculo solvens comam</l>
+                    <l>secreta nudo nemora lustravi pede</l>
+                    <l>et evocavi nubibus siccis aquas</l>
+                    <l>egique ad imum maria, et Oceanus graves </l>
+                    <l>interius undas aestibus victis dedit;</l>
+                    <l>pariterque mundus lege confusa aetheris</l>
+                    <l>et solem et astra vidit et vetitum mare</l>
+                    <l>tetigistis, ursae. temporum flexi vices:</l>
+                    <l>aestiva tellus floruit cantu meo, </l>
+                    <l>coacta messem vidit hibernam Ceres;</l>
+                    <l>violenta Phasis vertit in fontem vada</l>
+                    <pb n="p.146"/>
+                    <l>et Hister, in tot ora divisus, truces</l>
+                    <l>compressit undas omnibus ripis piger.</l>
+                    <l>Sonuere fluctus, tumuit insanum mare </l>
+                    <l>tacente vento; nemoris antiqui domus</l>
+                    <l>emisit umbras vocis imperio meae.</l>
+                    <l>die relicto Phoebus in medio stetit</l>
+                    <l>Hyadesque nostris cantibus motae labant:</l>
+                    <l>adesse sacris tempus est, Phoebe, tuis. </l>
+                    <l>tibi haec cruenta serta texuntur manu,</l>
+                    <l>no vena quae serpens ligat,</l>
+                    <l>tibi haec Typhoeus membra quae discors</l>
+                    <l>qui regna concussit Iovis,</l>
+                    <l>vectoris istic perfidi sanguis inest, </l>
+                    <l>quem Nessus expirans dedit.</l>
+                    <l>Oetaeus isto cinere defecit rogus,</l>
+                    <l>qui virus Herculeum bibit,</l>
+                    <l>piae sororis, impiae matris, facem</l>
+                    <l>ultricis Althaeae vides, </l>
+                    <l>reliquit istas invio plumas specu</l>
+                    <l>Harpyia, dum Zeten fugit,</l>
+                    <l>his adice pinnas sauciae Stymphalidos</l>
+                    <l>Lernaea passae spicula,</l>
+                    <l>sonuistis, arae, tripodas agnosco meos </l>
+                    <l>favente commotos dea.</l>
+                    <l>Video Triviae currus agiles,</l>
+                    <l>non quos pleno lucida vultu</l>
+                    <l>pernox agitat,</l>
+                    <pb n="p.147"/>
+                    <l>sed quos facie Iurida maesta, </l>
+                    <l>cum Thessalicis vexata minis</l>
+                    <l>caelum freno propiore legit.</l>
+                    <l>sic face tristem pallida lucem</l>
+                    <l>funde per auras,</l>
+                    <l>horrore novo terre populos</l>
+
+                    <l>inque auxilium, Dictynna, tuum </l>
+                    <l>pretiosa sonent aera Corinthi.</l>
+                    <l>tibi sanguineo caespite sacrum</l>
+                    <l>sollemne damus,</l>
+                    <l>tibi de medio rapta sepulchro</l>
+                    <l>fax nocturnos sustulit ignes, </l>
+                    <l>tibi mota caput </l>
+                    <l>fiexa voces cervice dedi,</l>
+                    <l>tibi funereo de more iacens</l>
+                    <l>passos cingit vitta capillos,</l>
+                    <l>tibi iactatur</l>
+
+                    <l>tristis Stygia ramus ab unda, </l>
+                    <l>tibi nudato pectore maenas</l>
+                    <l>sacro feriam bracchia cultro.</l>
+                    <l>manet noster sanguis ad aras:</l>
+                    <l>assuesce, manus, stringere ferrum</l>
+                    <l>carosque pati posse cruores. </l>
+                    <l>sacrum laticem percussa dedi.</l>
+                    <l>quodsi nimium saepe vocari</l>
+                    <l>querens votis, ignosce precor:</l>
+                    <l>causa vocandi, Persei, tuos</l>
+                    <l>saepius arcus una atque eadem est </l>
+                    <l>semper <name type="person" ref="#iason">Iason</name>.</l>
+                    <l>tu nunc vestes tinge Creusae,</l>
+                    <l>quas cum primum sumpserit, imas</l>
+                    <l>urat serpens flamma medullas.</l>
+                    <l>ignis fulvo elusus in auro </l>
+                    <l>latet obscurus, quem mihi caeli</l>
+                    <pb n="p.148"/>
+                    <l>qui furta luit viscere feto</l>
+                    <l>dedit et docuit condere vires</l>
+                    <l>arte, Prometheus, dedit et tenui</l>
+                    <l>sulphure tectos Mulciber ignes, </l>
+                    <l>et vivacis fulgura flammae</l>
+                    <l>de cognato Phaethonte tuli.</l>
+                    <l>habeo en dirae dona Chimaerae,</l>
+                    <l>habeo flammas</l>
+                    <l>usto tauri gutture raptas, </l>
+                    <l>quas permixto felle Medusae</l>
+                    <l>tacitum iussi servare malum,</l>
+                    <l>adde venenis stimulos, <name type="person">Hecate</name>,</l>
+                    <l>donisque meis</l>
+                    <l>semina flammae condita serva. </l>
+                    <l>fallant visus tactusque ferant,</l>
+                    <l>meet in pectus venasque calor,</l>
+                    <l>stillent artus ossaque tument</l>
+                    <l>vincatque suas</l>
+                    <l>flagrante coma nova nupta faces.</l>
+
+                    <l>Vota tenentur: ter latratus </l>
+                    <l>audax <name type="person">Hecate</name> dedit et sacros</l>
+                    <l>edidit ignes face lucifera.</l>
+                    <l>Peracta vis est omnis: huc natos voca,</l>
+                    <l>pretiosa per quos dona nubenti feram,</l>
+                    <l>ite, ite, nati, matris infaustae genus, </l>
+                    <l>placate vobis munere et multa prece</l>
+                    <l>dominam ac novercam.. vadite et celeres domum</l>
+                    <l>referte gressus, ultimo amplexu ut fruar,</l>
+                </sp>
+                <milestone n="848" unit="card"/>
+                <sp who="#chorus">
+                    <speaker>Chorus</speaker>
+                    <l>Quonam cruenta maenas</l>
+                    <l>praeceps amore saevo </l>
+                    <l>rapitur? quod impotenti</l>
+                    <pb n="p.149"/>
+                    <l>facilius parat furore?—</l>
+                    <l>vultus citatus ira</l>
+                    <l>riget et caput feroci</l>
+                    <l>quatiens superba motu </l>
+                    <l>regi minatur ultro.</l>
+                    <l>quis credat exulem?</l>
+                    <l>flagrant genae rubentes.</l>
+                    <l>pallor fugat ruborem,</l>
+                    <l>nullum vagante forma </l>
+                    <l>servat diu colorem.—</l>
+                    <l>huc fert pedes et illuc,</l>
+                    <l>ut tigris orba natis</l>
+                    <l>cursu furente lustrat</l>
+                    <l>Grangeticum nemus. </l>
+                    <l>frenare nescit iras</l>
+                    <l><name type="person" ref="#medea">Medea</name>, non amores;</l>
+                    <l>nunc ira amorque causam</l>
+                    <l>iunxere: quid sequetur?</l>
+                    <l>quando efferet Pelasgis </l>
+                    <l>nefanda Colchis arvis</l>
+                    <l>gressum metuque solvet</l>
+                    <l>regnum simulque reges?—</l>
+                    <l>nunc, Phoebe, mitte currus</l>
+                    <l>nullo morante loro, </l>
+                    <l>nox condat alma lucem,</l>
+                    <l>mergat diem timendum</l>
+                    <l>dux noctis Hesperus.</l>
+                </sp></div>
+                <div><sp who="#nuntius #chorus #nutrix #medea #iason">
+                    <speaker>nuntius chorus nutrix medea iason</speaker>
+                    <l>Periere cuncta, concidit regni status,</l>
+                    <l>nata atque, genitor cinere permixto iacent. </l>
+                </sp>
+                <pb n="p.150"/>
+
+                <sp who="#chorus">
+                    <speaker>Chor.</speaker>
+                    <l part="I">Qua fraude capti?</l>
+                </sp>
+                <sp who="#nuntius">
+                    <speaker>Nvnt.</speaker>
+                    <l  part="F">Qua solent reges capi:</l>
+                    <l part="I">donis.</l>
+                </sp>
+                <sp who="#chorus">
+                    <speaker>Chor.</speaker>
+                    <l part="F">In illis esse quis potuit dolus?</l>
+                </sp>
+
+                <sp who="#nuntius">
+                    <speaker>Nvnt.</speaker>
+                    <l>Et ipse miror vixque iam facto malo</l>
+                    <l  part="I">potuisse fieri credo.</l>
+                </sp>
+                <sp who="#chorus">
+                    <speaker>Chor.</speaker>
+                    <l part="F">Quis cladis modus?</l>
+                </sp>
+
+                <sp who="#nuntius">
+                    <speaker>Nvnt.</speaker>
+                    <l>Avidus per omnem regiae partem furit . </l>
+                    <l>ut iussus ignis: iam domus tota occidit,</l>
+                    <l part="I">urbi timetur.</l>
+                </sp>
+                <sp who="#chorus">
+                    <speaker>Chor.</speaker>
+                    <l part="F">Vnda flammas opprimat.</l>
+                </sp>
+
+                <sp who="#nuntius">
+                    <speaker>Nvnt.</speaker>
+                    <l>Et hoc in ista clade mirandum accidit:</l>
+                    <l>alit unda flammas, quoque prohibetur magis,</l>
+                    <l>magis ardet ignis: ipsa praesidia occupat. </l>
+                </sp>
+
+                <sp who="#nutrix">
+                    <speaker>Nvtr.</speaker>
+                    <l>Effer citatum sede Pelopea gradum,</l>
+                    <l><name type="person" ref="#medea">Medea</name>, praeceps quaslibet terras pete.</l>
+                </sp>
+                <milestone n="893" unit="card"/>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Egone ut recedam? si profugissem prius,</l>
+                    <l>ad hoc redirem, nuptias specto novas,</l>
+                    <l>quid, anime, cessas? sequere felicem impetum. </l>
+                    <l>pars ultionis ista, qua gaudes, quota est?</l>
+                    <l>amas adhuc, furiosa, si satis est tibi</l>
+                    <l>caelebs <name type="person" ref="#iason">Iason</name>, quaere poenarum genus</l>
+                    <l>haut usitatum iamque sic temet para:</l>
+                    <l>fas omne cedat, abeat expulsus pudor; </l>
+                    <l>vindicta levis est quam ferunt purae manus,</l>
+                    <l>incumbe in iras teque languentem excita</l>
+                    <l>penitusque veteres pectore ex imo impetus</l>
+                    <l>violenter hauri. quicquid admissum est adhuc,</l>
+                    <l>pietas vocetur, hoc agam et faxo sciant </l>
+                    <l>quam levia fuerint quamque vulgaris notae</l>
+                    <l>quae commodavi scelera, prolusit dolor</l>
+                    <l>per ista noster: quid manus poterant rudes</l>
+                    <l>audere magnum? quid puellaris furor?</l>
+                    <l><name type="person" ref="#medea">Medea</name> nunc sum; crevit ingenium malis. </l>
+                    <pb n="p.151"/>
+                    <l>Iuvat, iuvat rapuisse fraternum caput;</l>
+                    <l>artus iuvat secuisse et arcano patrem</l>
+                    <l>spoliasse sacro, iuvat in exitium senis</l>
+                    <l>armasse natas, quaere materiam, dolor:</l>
+                    <l>ad omne facinus non rudem dextram afferes. </l>
+                    <l>Quo te igitur, ira, mittis, aut quae perfido</l>
+                    <l>intendis hosti tela? nescio quid ferox</l>
+                    <l>decrevit animus intus et nondum sibi</l>
+                    <l>audet fateri, stulta properavi nimis:</l>
+                    <l>ex paelice utinam liberos hostis meus</l>
+                    <l>aliquos haberet— quicquid ex illo tuum est,</l>
+                    <l>Creusa peperit, placuit hoc poenae genus,</l>
+                    <l>meritoque placuit: ultimum, agnosco, scelus</l>
+                    <l>animo parandum est— liberi quondam mei,</l>
+                    <l>vos pro paternis sceleribus poenas date. </l>
+                    <l>Cor pepulit horror, membra torpescunt gelu</l>
+                    <l>pectusque tremuit. ira discessit loco</l>
+                    <l>materque tota coniuge expulsa redit,</l>
+                    <l>egone ut meorum liberum ac prolis meae</l>
+                    <l>fundam cruorem? melius, a, demens furor! </l>
+                    <l>incognitum istud facinus ac dirum nefas</l>
+                    <l>a me quoque absit; quod scelus miseri luent?</l>
+                    <l>scelus est <name type="person" ref="#iason">Iason</name> genitor et maius scelus</l>
+                    <l><name type="person" ref="#medea">Medea</name> mater— occidant, non sunt mei;</l>
+                    <l>pereant, mei sunt. crimine et culpa carent, </l>
+                    <l>sunt innocentes: fateor, et frater fuit.</l>
+                    <l>quid, anime, titubas? ora quid lacrimae rigant</l>
+                    <l>variamque nunc huc ira, nunc illuc amor</l>
+                    <l>diducit? anceps aestus incertam rapit;</l>
+                    <l>ut saeva rapidi bella cum venti gerunt </l>
+                    <l>utrimque fluctus maria discordes agunt</l>
+                    <l>dubiumque fervet pelagus, haut aliter meum</l>
+                    <pb n="p.152"/>
+                    <l>cor fluctuatur. ira pietatem fugat</l>
+                    <l>iramque pietas— cede pietati, dolor.</l>
+                    <l>Huc, cara proles, unicum afflictae domus </l>
+                    <l>solamen, huc vos ferte et infusos mihi</l>
+                    <l>coniungite artus, habeat incolumes pater,</l>
+                    <l>dum et mater habeat, urguet exilium ac fuga.</l>
+                    <l>iam iam meo rapientur avulsi e sinu,</l>
+                    <l>flentes, gementes osculis pereant patri, </l>
+                    <l>periere matri, rursus increscit dolor</l>
+                    <l>et fervet odium, repetit invitam manum</l>
+                    <l>antiqua Erinys. ira, qua ducis, sequor,</l>
+                    <l>utinam superbae turba Tantalidos meo</l>
+                    <l>exisset utero bisque septenos parens </l>
+                    <l>natos tulissem! sterilis in poenas fui—</l>
+                    <l>fratri patri que quod sat est, peperi duos.</l>
+                    <l>Quonam ista tendit turba Furiarum impotens?</l>
+                    <l>quem quaerit aut quo flammeos ictus parat,</l>
+                    <l>aut cui cruentas agmen infernum faces </l>
+                    <l>intentat? ingens anguis excusso sonat</l>
+                    <l>tortus flagello, quem trabe infesta petit</l>
+                    <l>Megaera? cuius umbra dispersis venit</l>
+                    <l>incerta membris? frater est, poenas petit:</l>
+                    <l>dabimus., sed omnes, fige luminibus faces, </l>
+                    <l>lania, perure, pectus en Furiis patet.</l>
+                    <l>Discedere a me, frater, ultrices deas</l>
+                    <l>manesque ad imos ire securas iube:</l>
+                    <l>mihi me relinque et utere hac, frater, manu</l>
+                    <l>quae strinxit ensem— victima manes tuos </l>
+                    <l>placamus ista. quid repens affert sonus?</l>
+                    <pb n="p.153"/>
+                    <l>parentur arma meque in exitium petunt.</l>
+                    <l>excelsa nostrae tecta conscendam domus</l>
+                    <l>caede incohata, perge tu mecum comes.</l>
+                    <l>tuum quoque ipsa corpus hinc mecum aveham. </l>
+                    <l>nunc hoc age, anime: non in occulto tibi est</l>
+                    <l>perdenda virtus; approba populo manum.</l>
+                </sp>
+                <milestone n="978" unit="card"/>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Quicumque regum cladibus fidus doles,</l>
+                    <l>concurre, ut ipsam sceleris auctorem horridi</l>
+                    <l>capiamus, huc, huc fortis, armiferi cohors </l>
+                    <l>conferte tela, vertite ex imo domum.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Iam iam recepi sceptra germanum patrem,</l>
+                    <l>spoliumque Colchi pecudis auratae tenent;</l>
+                    <l>rediere regna, rapta virginitas redit,</l>
+                    <l>o placida tandem numina, o festum diem, </l>
+                    <l>o nuptialem! vade, perfectum est scelus,</l>
+                    <l>vindicta nondum: perage, dum faciunt manus,</l>
+                    <l>quid nunc moreris, anime? quid dubitas potens?</l>
+                    <l>iam cecidit ira. paenitet facti, pudet,</l>
+                    <l>quid, misera, feci? misera? paeniteat licet, </l>
+                    <l>feci— voluptas magna me invitam subit,</l>
+                    <l>et ecce crescit, derat hoc unum mihi,</l>
+                    <l>spectator iste. nil adhuc facti reor:</l>
+                    <l>quicquid sine isto fecimus sceleris perit.</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>En ipsa tecti parte praecipiti imminet. </l>
+                    <l>huc rapiat ignes aliquis, ut flammis cadat</l>
+                    <l part="I">suis perusta.</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Congere extremum tuis</l>
+                    <l>' natis, <name type="person" ref="#iason">Iason</name>, funus, ac tumulum strue:</l>
+                    <l>coniunx socerque iusta iam functis habent,</l>
+                    <l>a me sepulti; gnatus hic fatum tulit, </l>
+                    <l>hic te vidente dabitur exitio pari.</l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Per numen omne perque communes fugas</l>
+                    <pb n="p.154"/>
+                    <l>torosque, quos non nostra violavit fides,</l>
+                    <l>iam parce nato. si quod est crimen, meum est:</l>
+                    <l>me dedo morti; noxium macta caput. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Hac qua recusas, qua doles, ferrum exigam.</l>
+                    <l>i nunc, superbe, virginum thalamos pete,</l>
+                    <l part="I">relinque matres,</l>
+                </sp>
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="F">Vnus est poenae satis.</l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Si posset una caede satiari haec manus,</l>
+                    <l>nullam petisset, ut duos perimam, tamen </l>
+                    <l>nimium est dolori numerus angustus meo.</l>
+                    <l>
+                        <del>in matre si quod pignus etiamnunc latet,</del>
+                    </l>
+                    <l>
+                        <del>scrutabor ense viscera et ferro extraham.</del>
+                    </l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Iam perage coeptum facinus, haut ultra precor,</l>
+                    <l>moramque saltem supplicis dona meis. </l>
+                </sp>
+
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l>Perfruere lento scelere, ne propera, dolor:</l>
+                    <l>meus dies est; tempore accepto utimur.</l>
+                </sp>
+
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l part="I">Infesta, memet perime.</l>
+                </sp>
+                <sp who="#medea">
+                    <speaker>Med.</speaker>
+                    <l part="F">Misereri iubes.</l>
+                    <l>bene est, peractum est. plura non habui, dolor,</l>
+                    <l>quae tibi litarem. lumina huc tumida alleva, </l>
+                    <l>ingrate <name type="person" ref="#iason">Iason</name>, coniugem agnoscis tuam?</l>
+                    <l>sic fugere soleo, patuit in caelum via:</l>
+                    <l>squamosa gemini colla serpentes iugo</l>
+                    <l>summissa praebent, recipe iam gnatoa, parens;</l>
+                    <l>ego inter auras aliti curru vehar. </l>
+                </sp>
+
+                <sp who="#iason">
+                    <speaker>Ias.</speaker>
+                    <l>Per alta vade spatia sublimi aethere,</l>
+                    <l>testare nullos esse, qua veneris, deos.</l>
+                </sp></div>
+            </div>
+        </body>
+    </text>
+</TEI>
