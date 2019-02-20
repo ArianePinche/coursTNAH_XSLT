@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" 
+    schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="work">Ad Lucilium Epistulae Morales</title>
+                <title type="sub">Machine readable text</title>
+                <author n="Sen.">Seneca</author>
+                <editor role="editor" n="Gummere">Richard M. Gummere</editor>
+                <principal>Gregory Crane</principal>
+                <respStmt>
+                    <resp>Prepared under the supervision of</resp>
+                    <name>Bridget Almas</name>
+                    <name>Lisa Cerrato</name>
+                    <name>David Mimno</name>
+                    <name>Rashmi Singhal</name>
+                </respStmt>
+                <funder n="org:Tufts">Tufts University</funder>
+            </titleStmt>
+            <extent>About 100Kb</extent>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+                <authority>Perseus Project</authority>
+                <date type="release">2009-10-07</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title>Ad Lucilium Epistulae Morales, volume 1-3</title>
+                        <author n="Sec.">Seneca</author>
+                        <editor role="editor" n="Gummere">Richard M. Gummere</editor>
+                        <imprint>
+                            <pubPlace>Cambridge</pubPlace>
+                            <publisher>Cambridge, Mass., Harvard University Press; London, William
+                                Heinemann, Ltd.</publisher>
+                            <date>1917-1925</date>
+                        </imprint>
+                    </monogr>
+                    <ref target="https://archive.org/details/adluciliumepistu01sene">Internet
+                        Archive</ref>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <refsDecl n="TEI.2">
+                <refState unit="letter"/>
+                <refState unit="section"/>
+            </refsDecl>
+            <!-- [...] x-->
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="lat">Latin</language>
+                <language ident="grc">Greek</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2009-01-01" who="gcrane">Tagging</change>
+            <change when="2015-11-12" who="Thibault Clerice">New URN, Epidoc and CTS</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="edition" n="urn:cts:latinLit:phi1017.phi015.perseus-lat2">
+                <div type="letter">
+                    <head type="salutatio">Seneca Lucilio suo salutem</head>
+                    <div type="section" subtype="A">
+                        <p>Ita fac, mi Lucili; vindica te tibi, et tempus, quod adhuc aut
+                            auferebatur aut subripiebatur aut excidebat, collige et serva. Persuade
+                            tibi hoc sic esse, ut scribo: quaedam tempora eripiuntur nobis, quaedam
+                            subducuntur, quaedam effluunt. Turpissima tamen est iactura, quae per
+                            neglegentiam fit. Et si volueris attendere, maxima pars vitae elabitur
+                            male agentibus, magna nihil agentibus, tota vita aliud agentibus. </p>
+                    </div>
+                    <div type="section" subtype="B">
+                        <p>Quem mihi dabis, qui aliquod pretium tempori ponat, qui diem aestimet,
+                            qui intellegat se cotidie mori ? In hoc enim fallimur, quod mortem
+                            prospicimus; magna pars eius iam praeterit. Quicquid aetatis retro est,
+                            mors tenet.</p>
+                        <p>Fac ergo, mi Lucili, quod facere te scribis, omnes horas conplectere. Sic
+                            fiet, ut minus ex crastino pendeas, si hodierno manum inieceris. Dum <pb
+                                n="v1.p.4"/> differtur, vita transcurrit. </p>
+                    </div>
+                    <div type="section" subtype="A">
+                        <p>Omnia, Lucili, aliena sunt, tempus tantum nostrum est. In huius rei unius
+                            fugacis ac lubricae possessionem natura nos misit, ex qua expellit
+                            quicumque vult. Et tanta stultitia mortalium est, ut quae minima et
+                            vilissima sunt, certe reparabilia, imputari sibi, cum impetravere,
+                            patiantur; nemo se iudicet quicquam debere, qui tempus accepit, cum
+                            interim hoc unum est, quod ne gratus quidem potest reddere. </p>
+                    </div>
+                    <div type="section" subtype="B">
+                        <p>Interrogabis fortasse, quid ego faciam, qui tibi ista praecipio. Fatebor
+                            ingenue: quod apud luxuriosum sed diligentem evenit, ratio mihi constat
+                            inpensae. Non possum me dicere <note xml:id="v1.n.4.1">me dicere Hense;
+                                dicere me or dicere nihil me MSS.</note> nihil perdere, sed quid
+                            perdam et quare et quemadmodum, dicam; causas paupertatis meae reddam,
+                            sed evenit mihi, quod plerisque non suo vitio ad inopiam redactis: omnes
+                            ignoscunt, nemo succurrit. </p>
+                    </div>
+                    <div type="section" subtype="A">
+                        <p>Quid ergo est ? Non puto pauperem, cui quantulumcumque superest, sat est.
+                            Tu tamen malo serves tua, et bono tempore incipies. Nam ut visum est
+                            maioribus nostris, sera parsimonia in fundo est. Non enim tantum minimum
+                            in imo, sed pessimum remanet. VALE. <pb n="v1.p.6"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
