@@ -45,21 +45,36 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet [et al.], *XML en conc
 
 Dans Oxygen :
 
-1) Appliquer une XSLT vide sur le document Mon_reve_familierTEI.xml
+1) Ouvrir le fichier Mon_reve_familierTEI.xml et un nouveau fichier xsl
 
-2) Appliquer la règle suivante :
-`<xsl:template match="/">`
-        `<xsl:apply-templates/>`
-`</xsl:template>`
+2) Appliquer une XSLT vide sur le document Mon_reve_familierTEI.xml
 
 3) Appliquer la règle suivante :
+```XML
+<xsl:template match="/">
+        <xsl:apply-templates/>
+</xsl:template>
+```
+
+4) Appliquer la règle suivante :
+
+```XML
 `<xsl:template match="text()"/>`
+```
+---
+
+5) Appliquer la règle suivante :
+```XML
+<xsl:template match="/">
+  <xsl:copy-of select="."/>
+<xsl:template/>
+```
 
 ---
 ## Sélectionnner des éléments XML
 
 1) Comment sélectionner et copier l'élément `<lg>` ?;
-2) Sélectionner et copier uniquement les `<lg>`dont la valeur de @type est "quatrain";
+2) Sélectionner et copier uniquement les `<lg>`dont la valeur de @type est 'quatrain';
 3) Sélectionner et copier tous les troisièmes vers;
 4) Sélectionner et copier le troisième `<l>` du deuxième tercet;
 5) Copier les `<lg>` qui sont premiers dans l’arbre;

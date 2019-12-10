@@ -57,17 +57,19 @@ mais aussi des balises, ou un motif qui permet de récupérer certains élément
 ###### Méthode n°1 :
 ```XML
 <xsl:template match="mon_element_xml">
-  <p type="valeur_attribut">Ici, il y avait mon élément</p>
+  <p type="valeur_attribut">Ici, 
+    il y avait mon élément</p>
 </xsl:template>
 ```
 ou
 
 ```XML
 <xsl:template match="mon_element_xml">
-        <p type="{./chemin_Xpath}">Ici, il y avait mon élément</p>
+        <p type="{./chemin_Xpath}">Ici, 
+          il y avait mon élément</p>
 </xsl:template>
 ````
-
+---
 ###### Méthode n°2 :
 ```XML
 <xsl:template match="mon_element_xml">
@@ -116,7 +118,7 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
 
 ```XML
 <xsl:template match="mon_element_xml">
-	<xsl:copy-of select="chemin_Xpath"/>
+	<xsl:copy-of/>
 </xsl:template>
 ```
 
@@ -124,7 +126,7 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
 
 ## Value-of
 
-"« L’élément xsl:value-of calcule la valeur textuelle d’une expression Xpath et l’insère dans l’arbre résultat. »
+« L’élément xsl:value-of calcule la valeur textuelle d’une expression Xpath et l’insère dans l’arbre résultat. »
 
 Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en concentré*, Paris, O’Reilly, 2005, p. 543.
 
@@ -155,4 +157,4 @@ L’élément possède plusieurs attributs :
 
 ## Exercice
 
-À l’aide des éléments vus pendant la séance, reproduire le fichier TEI de Verlaine en numérotant automatiquement les vers et les strophes. Essayer de proposer plusieurs formats et plusieurs types de numérotation des vers.
+À l’aide des éléments vus pendant la séance, reproduire l'intégralité du fichier TEI de Verlaine en numérotant automatiquement les vers et les strophes. Essayer de proposer plusieurs formats et plusieurs types de numérotation des vers.
