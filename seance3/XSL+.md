@@ -36,8 +36,8 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
 	- un body avec un titre (head)
 - **Etape n°2**
 	- deux groupes de lg distincts :
-		- un lg @type="orig" qui donnera le contenu de la cantilène organisé en vers numérotés de manière continue et présentant le texte avec la graphie du manuscrit source.
-		- un lg @type="reg" qui donnera le contenu de la cantilène organisé en vers numérotés et présentant le texte avec une graphie normalisée.
+		- un lg @type="orig" qui donnera le contenu de la cantilène présentant le texte avec la graphie du manuscrit source.
+		- un lg @type="reg" qui donnera le contenu de la cantilène organisé présentant le texte avec une graphie normalisée.
 
 --- 
 
@@ -53,7 +53,6 @@ ou
 ````
 La variable est appelée par la suite par $nom_variable 
 ```XML
-<xsl:copy-of select="$variable"/>
 <xsl:value-of select="$variable"/>
 ```
 ---
@@ -61,11 +60,18 @@ La variable est appelée par la suite par $nom_variable
 
 - Concat : permet de souder ensemble des chaînes de caractères
 	-  concat(string,string,…)
-ex : ```
-<xsl:value-of select= ‘concat(‘element1’, ‘element2‘, ‘element3’)```
+ex : 
+```XML
+<xsl:value-of select="concat('element1', 'element2')"
+```
 - Replace : permet de modifier une chaîne de caractères
 	- replace(string,pattern,replace)
-ex : ```<xsl:value-of select= ‘replace(element_a_modifier, ‘caracteres_a_remplacer‘, ‘caractere_de_remplacement’)```
+ex : 
+```XML
+<xsl:value-of select="replace(element_a_modifier,
+                      'caracteres_a_remplacer', 
+                      'caractere_de_remplacement')"/>
+```
 ---
 
 
@@ -85,9 +91,31 @@ Transformer le fichier XML mon rêve familier en fichier HTML à afficher.
 1) Créer un nouveau fichier XSLT
 2) Définir le namespace tei par défaut dans votre Xpath.
 3) Paramétrer HTML comme format de sortie avec un encodage utf-8 à l’aide de xsl:output @method @encodage.
+---
+
 4) Créer une structure HTML d’accueil des données XML :
-	* Ajouter dans un titre (h1) avant le poème contenant le titre, comprenant le « title », « écrit par », « author ».
-	* Structurer votre poème à l’aide de ul pour les tercets et les quatrains et li pour les vers 
+```HTML
+<html>
+  <head><meta charset="UTF-8"/>
+      <title>Exercice de structuration HTML</title>
+  </head>
+  <body><h1> Ajouter ici le titre demandé (voir A) </h1>
+	<ul> 
+  Remplacer les lg du poeme en XML par des ul (Voir B)
+	  <ul>
+	    <li></li>
+  Remplacer les l du poeme en XML par des li (voir B)
+[…]
+	  </ul>
+[…]
+	</ul>
+        <div> Ajouter ici le texte demandé en 7</div>
+  </body>
+</html>
+```
+
+- A- Ajouter dans h1 le titre du poeme, comprenant le contenu de la balise `<title>`, « écrit par », le contenu de la balise `author`.
+- B- Structurer votre poème à l’aide de `<ul>` pour les tercets et les quatrains et `<li>` pour les vers 
 ---
 
 5) Remplacer dans le titre « Mon » par « Un »
