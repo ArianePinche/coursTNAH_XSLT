@@ -59,7 +59,9 @@ Dans Oxygen :
 4) Appliquer la règle suivante :
 
 ```XML
-`<xsl:template match="text()"/>`
+<xsl:template match="text()">
+ <xsl:value-of select="."/>
+</xsl:template>  
 ```
 ---
 
