@@ -15,7 +15,7 @@ xsl:if contient un modèle, instancié si et seulement si l’expression Xpath c
 ---
 ## xsl:choose, xsl:when, xsl:otherwise
 
-L’élément xsl:choose sélectionne une possibilité dans une liste de choix. Cet élément contient au moins un xsl:when avec un attribut *@test*, quand la condition de *@test* est vérifiée, les motifs contenus par when sont exécutés. ». L’élément xsl:choose peut avoir un sous-élément optionnel xsl:otherwise dont le contenu est retourné si aucun élément xsl:when ne correspond.
+L’élément xsl:choose sélectionne une possibilité dans une liste de choix. Cet élément contient au moins un xsl:when avec un attribut *@test*, quand la condition de *@test* est vérifiée, les motifs contenus par when sont exécutés. L’élément xsl:choose peut avoir un sous-élément optionnel xsl:otherwise qui traite tous les cas qui ne correspondent pas à ceux sélectionnés par *xsl:when*.
 
 ```XML
 <xsl:template match="mon_element">
@@ -31,14 +31,16 @@ L’élément xsl:choose sélectionne une possibilité dans une liste de choix. 
 ---
  ## Exercice
  
- À partir du fichier Lucain.xml, reproduire l’arbre TEI – Ajouter sur les rdg l’attribut *@type* de valeur "main" quand @wit comprend #Z et "sub" dans tous les autres cas.
+ À partir du fichier Lucain.xml, 
+ – Reproduire l’arbre TEI 
+ – Ajouter sur les rdg l’attribut *@type* de valeur "main" quand @wit comprend "#Z" et "sub" dans tous les autres cas.
  
 --- 
 
 ## III-xsl:for-each, xsl:sort et xsl:for-each-group
 
 ### xsl:for-each
- L’instruction xsl:for-each itère sur les nœuds sélectionnés par son attribut *@select* et applique le modèle de son contenu à chacun
+ L’instruction xsl:for-each itère sur les nœuds sélectionnés par son attribut *@select* et applique le modèle de son contenu à chacun des éléments du nœud.
 
 ```XML 
 <xsl:template match="mon_element">
@@ -54,11 +56,12 @@ L’élément xsl:choose sélectionne une possibilité dans une liste de choix. 
 
 Pour chaque apparat, créer deux rdgGrp :
 * Le premier possède l’attritut @type="main" et doit contenir le lemme et toutes les leçons de Z (Z1, Z2 etc.) que vous récupèrez à l’aide de for-each.
-* Le deuxième possède l’attribut @type="sub" et doit contenir toutes les leçons qui ne contiennent pas Z que vous récupèrez à l’aide de for-each. 
+* Le deuxième possède l’attribut @type="sub" et doit contenir toutes les leçons qui ne contiennent pas "Z" que vous récupèrez à l’aide de for-each. 
  
 --- 
 ### xsl:sort
- L’instruction xsl:sort apparaît comme un enfant de xsl:apply-templates ou xsl:for-each. Il change l’ordre dans lequel les modèles sont appliqués à la liste de nœuds contextuelle de l’ordre du document en un autre ordre, comme l’ordre alphabétique.
+
+ L’instruction xsl:sort apparaît comme un enfant de xsl:apply-templates ou xsl:for-each. Il change l’ordre des nœuds contextuels du document source en un autre ordre, comme l’ordre alphabétique.
 
 Liste des attributs : 
 * @select : clé du tri;
@@ -70,7 +73,8 @@ Liste des attributs :
 ```XML
 <xsl:template match="mon_element">
 	<xsl:for-each select="sous-elements">
-    	<xsl:sort select="cle_tri" order=’ascending|descending’/>
+    	<xsl:sort select="cle_tri"
+                  order='ascending|descending'/>
    	 <xsl:copy-of select="."/>
 	</xsl:for-each>
 </xsl:template>
