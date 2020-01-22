@@ -16,7 +16,7 @@
     </xsl:template>
     
     
-   <xsl:template match="tei:lg[@type='tercet'][2]/tei:l[3]">
+   <xsl:template match="(//tei:l)[3]">
        <xsl:copy-of select="."/>
    </xsl:template>
     
