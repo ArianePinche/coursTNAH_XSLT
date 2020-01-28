@@ -91,9 +91,8 @@ Transformer le fichier XML mon rêve familier en fichier HTML à afficher.
 1) Créer un nouveau fichier XSLT
 2) Définir le namespace tei par défaut dans votre Xpath.
 3) Paramétrer HTML comme format de sortie avec un encodage utf-8 à l’aide de xsl:output @method @encodage.
----
-
 4) Créer une structure HTML d’accueil des données XML :
+---
 ```HTML
 <html>
   <head><meta charset="UTF-8"/>
@@ -113,11 +112,11 @@ Transformer le fichier XML mon rêve familier en fichier HTML à afficher.
   </body>
 </html>
 ```
+----
 
 - A- Ajouter dans h1 le titre du poeme, comprenant le contenu de la balise `<title>`, « écrit par », le contenu de la balise `author`.
 - B- Structurer votre poème à l’aide de `<ul>` pour les tercets et les quatrains et `<li>` pour les vers 
 ---
-
 5) Remplacer dans le titre « Mon » par « Un »
 6) Trouver un moyen de numéroter les vers dans le HTML pour que le numéro n’apparaisse qu’au passage de la souris. 
 7) Bonus : ajouter à la fin du poème, la ligne "Ce poème contient [x=nb de vers] vers", puis remplacer « poème » par la valeur de @type du lg qui contient l’intégralité du poème.
