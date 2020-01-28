@@ -1,4 +1,4 @@
-# Séance 3 : Allez plus loin dans l’usage des règles de base
+x# Séance 3 : Allez plus loin dans l’usage des règles de base
 
 ---
 
@@ -90,7 +90,7 @@ Transformer le fichier XML mon rêve familier en fichier HTML à afficher.
 
 1) Créer un nouveau fichier XSLT
 2) Définir le namespace tei par défaut dans votre Xpath.
-3) Paramétrer HTML comme format de sortie avec un encodage utf-8 à l’aide de xsl:output @method @encodage.
+3) Paramétrer HTML comme format de sortie avec un encodage utf-8 à l’aide de xsl:output @method @encoding.
 4) Créer une structure HTML d’accueil des données XML :
 ---
 ```HTML
