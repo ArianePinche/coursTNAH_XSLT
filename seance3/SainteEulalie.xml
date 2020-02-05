@@ -145,6 +145,50 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <charDecl>
+            <char xml:id="q1">
+               <charName>Q SEMICOLON</charName>
+               <charProp>
+                  <localName>entity</localName>
+                  <value>&#61868;</value>
+               </charProp>
+            </char>
+         </charDecl>
+         <editorialDecl>
+            <correction method="markup">
+               <p>Une espace sépare toutes les initiales des débuts de ligne du mot auquel elles
+                  sont liées, comme pour former un acrostiche : "Buen nei eqe aliq"</p>
+            </correction>
+            <hyphenation>
+               <p>Le manuscrit ne propose pas de tirets de coupure de mot en de fin de ligne mais
+                  met les mots en exposants.</p>
+            </hyphenation>
+            <normalization method="markup">
+               <p>La minuscule "u" employée pour le "v" a été consevrée ; l'élément "choice" a été
+                  employé en association avec "orig" et "reg" pour fournir à la fois les formes
+                  originales et les formes normalisées.</p>
+               <p>De même les abbréviations ont été conservées ; l'élément "choice" a été employé en
+                  association avec "orig" et "reg" pour fournir à la fois les formes abrégées et les
+                  formes développées.</p>
+               <p>Dans la transcription, aucun signe de ponctuation absent du manuscrit n'a été
+                  ajouté, comme par exemple les virgules pour séparés les vers. Elles apparaissent
+                  en revance dans les traductions.</p>
+               <p>Le manuscrit présente quelques abréviations : un "Ꝑ" barré (&#x1D71;), à la place
+                  de la syllabe "per" et des "p" avec tilde horizontal pour "pre" rendu par "p̃" ;
+                  des "n" avec une tilde horizontale pour "non", restitués par un "ñ" ; des "o" avec
+                  une tilde horizontale pour "Deo", restités par un "õ" ; des "q" non barrés mais
+                  suivis d'une sorte de virgule pour "que", rendus par "ꝗ" ; une esperluettre pour
+                  "et". Les onciales grecques "xps" se retrouvent avec une tilde horizontale sur le
+                  "p" uniquement. Les deux premières onciales "xp̃" est employée pour le mot
+                  "christiien".</p>
+            </normalization>
+            <punctuation marks="all">
+               <p>Tous les signes de ponctuation du texte source -uniquement des points- ont été
+                  conservés.</p>
+            </punctuation>
+         </editorialDecl>
+      </encodingDesc> 
    </teiHeader>
    <text>
       <body>

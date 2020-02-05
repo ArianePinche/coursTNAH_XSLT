@@ -15,7 +15,7 @@ xsl:if contient un modèle, instancié si et seulement si l’expression Xpath c
 ---
 ## xsl:choose, xsl:when, xsl:otherwise
 
-L’élément xsl:choose sélectionne une possibilité dans une liste de choix. Cet élément contient au moins un xsl:when avec un attribut *@test*, quand la condition de *@test* est vérifiée, les motifs contenus par when sont exécutés. L’élément xsl:choose peut avoir un sous-élément optionnel xsl:otherwise qui traite tous les cas qui ne correspondent pas à ceux sélectionnés par *xsl:when*.
+L’élément xsl:choose sélectionne une possibilité dans une liste de choix. Cet élément contient au moins un xsl:when avec un attribut *@test*, quand la condition de *@test* est vérifiée, les motifs contenus par xsl:when sont exécutés. L’élément xsl:choose peut avoir un sous-élément optionnel xsl:otherwise qui traite tous les cas qui ne correspondent pas à ceux sélectionnés par *xsl:when*.
 
 ```XML
 <xsl:template match="mon_element">
@@ -88,7 +88,7 @@ Liste des attributs :
  ---
  ### xsl:for-each-group
  
-L’instruction *xsl:for-each-group* itère sur les groupes de nœuds sélectionnés par son attribut *@select* applique le modèle de son contenu à chacun d'entre eux, tandis que l'attribut *@group-by* sert de clé. Dans le motif, la fonction xpath *current-grouping-key()* permet de retourner la valeur de la clé de regroupement de la boucle en cours.
+L’instruction *xsl:for-each-group* itère sur les groupes de nœuds sélectionnés par son attribut *@select* et applique le modèle de son contenu à chacun d'entre eux, tandis que l'attribut *@group-by* permet de rassembler les noeuds sélectionnés en sous-groupes. Dans le motif, la fonction xpath *current-grouping-key()* permet de retourner la valeur de la clé de regroupement de la boucle en cours.
 
 ```XML
 <xsl:template match="mon_element">
