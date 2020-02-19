@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs" version="2.0">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns="http://www.tei-c.org/ns/1.0" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+    exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-   
+
     <xsl:template match="TEI">
         <xsl:copy>
             <xsl:copy-of select="teiHeader"/>
@@ -34,7 +35,7 @@
             <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
-    
+
     <!--
     <xsl:template match="app">
         <xsl:copy>
@@ -71,7 +72,8 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
- -->   <!-- 
+ -->
+    <!-- 
     <xsl:template match="app">
        <xsl:copy>
            <xsl:element name="rdgGrp" >
@@ -99,13 +101,13 @@
        </xsl:copy>    
     </xsl:template> 
   -->
-    
+<!--
     <xsl:template match="app">
         <xsl:copy>
-            <xsl:element name="rdgGrp" >
+            <xsl:element name="rdgGrp">
                 <xsl:attribute name="type">main</xsl:attribute>
                 <xsl:copy-of select="lem"/>
-                <xsl:for-each select="rdg[contains(@wit,'#Z')]">
+                <xsl:for-each select="rdg[contains(@wit, '#Z')]">
                     <xsl:sort select="@wit"/>
                     <xsl:element name="rdg">
                         <xsl:attribute name="wit">
@@ -115,13 +117,36 @@
                     </xsl:element>
                 </xsl:for-each>
             </xsl:element>
-            <xsl:element name="rdgGrp" >
+            <xsl:element name="rdgGrp">
                 <xsl:attribute name="type">sub</xsl:attribute>
-                <xsl:for-each select="rdg[not(contains(@wit,'#Z'))]">
+                <xsl:for-each select="rdg[not(contains(@wit, '#Z'))]">
                     <xsl:sort select="@wit"/>
                     <xsl:copy-of select="."/>
                 </xsl:for-each>
             </xsl:element>
-        </xsl:copy>    
-    </xsl:template> 
+        </xsl:copy>
+    </xsl:template>
+  -->
+   
+    <xsl:template match="app">
+        <xsl:copy>
+            <xsl:for-each-group select="rdg" group-by="@type">
+                <xsl:sort select="@type"/>
+                <xsl:element name="rdgGroup">
+                    <xsl:attribute name="type">
+                        <xsl:value-of select="current-grouping-key()"/>
+                    </xsl:attribute>
+                    <xsl:for-each select="current-group()">
+                        <xsl:element name="rdg">
+                            <xsl:attribute name="wit">
+                                <xsl:value-of select="@wit"/>
+                            </xsl:attribute>
+                            <xsl:value-of select="."/>
+                        </xsl:element>
+                    </xsl:for-each>
+                </xsl:element>
+            </xsl:for-each-group>
+        </xsl:copy>
+    </xsl:template>
+
 </xsl:stylesheet>
