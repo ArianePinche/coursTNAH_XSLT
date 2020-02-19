@@ -34,6 +34,10 @@
                         <ul><xsl:apply-templates select="//text//div" mode="reg"/></ul>
                     </div>
                 </div>
+                <div>
+                    <h2>Index</h2>
+                    <ul><xsl:apply-templates select=".//listPerson"/></ul>
+                </div>
             </body>
         </html>
     </xsl:template>
@@ -55,6 +59,24 @@
     <xsl:template match="choice" mode="reg">
         <xsl:value-of select=".//reg/text() |
             .//expan//text()"/>
+    </xsl:template>
+    
+    <xsl:template match="person">
+        <xsl:variable name="idPerson">
+            <xsl:value-of select="@xml:id"/>
+        </xsl:variable>
+        <li><xsl:value-of select="concat(persName, ' : ')"/>
+            <xsl:for-each select="ancestor::TEI//body//persName[replace(@ref, '#','')=$idPesrson]">
+                <xsl:value-of select="text() |
+                    .//reg/text() |
+                    .//expan//text()"/>
+                <xsl:text> (v.</xsl:text>
+                <xsl:value-of select="count(parent::l/preceding-sibling::l) + 1"/>
+                <xsl:text>)</xsl:text>
+                <xsl:if test="position()!= last()">, </xsl:if>
+                <xsl:if test="position() = last()">.</xsl:if>
+            </xsl:for-each>
+        </li>
     </xsl:template>
     
    
