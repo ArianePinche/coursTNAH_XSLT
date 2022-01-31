@@ -47,7 +47,8 @@ mais aussi des balises, ou un motif qui permet de récupérer certains élément
 ###### Méthode n°2 :
 ```XML
 <xsl:template match="mon_element_xml">
-<xsl:element name="p">Ici, il y avait mon élément</xsl:element>
+<xsl:element name="nom_element_a_creer">
+  Ici, il y avait mon élément</xsl:element>
 </xsl:template>
 ```
 
@@ -73,8 +74,8 @@ ou
 ###### Méthode n°2 :
 ```XML
 <xsl:template match="mon_element_xml">
-   <xsl:element name="p">
-        <xsl:attribute name="type">
+   <xsl:element name="nom_element_a_creer">
+        <xsl:attribute name="nom_attribut_a_creer">
              <xsl:text>valeur_attribut</xsl:text>
         </xsl:attribute>
         <xsl:text>Ici, il y avait mon élément</xsl:text>
@@ -90,7 +91,7 @@ Cette règle indique que les règles définies dans l’XSL doivent être appliq
 
 ```XML
 <xsl:template match="mon_element_xml">
-     <xsl:element name="p">
+     <xsl:element name="nom_element_a_creer">
           <xsl:apply-templates/>
      </xsl:element>
 </xsl:template>
@@ -118,7 +119,7 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
 
 ```XML
 <xsl:template match="mon_element_xml">
-	<xsl:copy-of/>
+	<xsl:copy-of select="element_a_copier"/>
 </xsl:template>
 ```
 
