@@ -1,4 +1,4 @@
-x# Séance 3 : Allez plus loin dans l’usage des règles de base
+# Séance 3 : Allez plus loin dans l’usage des règles de base
 
 ---
 
@@ -33,11 +33,11 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
  À l’aide des éléments que nous avons vus dans les séances 2 et 3, créer un nouveau fichier XML à partir de sainteEulalie.xml. Le fichier devra contenir les éléments suivants :
 - **Etape n°1**
 	- Un header identique au document source
-	- un body avec un titre (head)
+	- Un body avec un titre (head)
 - **Etape n°2**
-	- deux groupes de lg distincts :
-		- un lg @type="orig" qui donnera le contenu de la cantilène présentant le texte avec la graphie du manuscrit source.
-		- un lg @type="reg" qui donnera le contenu de la cantilène organisé présentant le texte avec une graphie normalisée.
+	- Deux groupes de lg distincts :
+		- Un lg @type="orig" qui donnera le contenu de la cantilène présentant le texte avec la graphie du manuscrit source.
+		- Un lg @type="reg" qui donnera le contenu de la cantilène organisé présentant le texte avec une graphie normalisée.
 
 --- 
 
